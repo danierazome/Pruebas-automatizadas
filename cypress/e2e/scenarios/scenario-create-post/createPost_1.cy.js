@@ -1,11 +1,11 @@
-describe("Create a ghost account scenery 4", () => {
+describe("Create a ghost post scenary 1", () => {
   it("Visits Ghost Web application", () => {
     cy.viewport(1280, 720);
     // LogIn page
     cy.visit("http://localhost:2368/ghost/#/signin");
     // LogingIn
     cy.get("#ember8").type("correoDePrueba@gmail.com");
-    cy.get("#ember10").type("@Pnqeeec0123*");
+    cy.get("#ember10").type("@1234567890*");
     cy.wait(1000);
     cy.get("#ember12").click();
     cy.visit("http://localhost:2368/ghost/#/site");

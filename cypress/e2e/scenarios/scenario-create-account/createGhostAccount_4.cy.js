@@ -6,7 +6,7 @@ describe("Create a ghost account scenery 4", () => {
     cy.get("#blog-title").type("MyFirstBlog");
     cy.get("#name").type("Juan José Montenegro Pulido");
     cy.get("#email").type("correoDePrueba@gmail.com");
-    cy.get("#password").type("@Pnqeeec0123*");
+    cy.get("#password").type("@1234567890*");
     cy.wait(1500);
     cy.get(".gh-btn-icon-right").click();
     cy.wait(5000);
