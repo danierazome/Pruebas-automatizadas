@@ -7,7 +7,7 @@ context( "Import Member", () => {
 
         // When
         cy.get("#identification").type("lrozoq@gmail.com");
-        cy.get("#password").type("LicethYaneth:3");
+        cy.get("#password").type("PassTest3");
         cy.get("button").contains(/Sign/).click({ force: true });
         cy.get("a").contains(/Members/).click({ force: true });
         if( !cy.get("table").should("exist") ) {
