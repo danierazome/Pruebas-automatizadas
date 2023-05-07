@@ -1,8 +1,8 @@
 describe("Create a ghost account scenery 4", () => {
+  const baseURL = Cypress.env("baseURL");
   it("Visits Ghost Web application", () => {
-    const baseURL = Cypress.env("baseURL");
     cy.viewport(1280, 720);
-    cy.visit("${/ghost/#/setup/two");
+    cy.visit(`${baseURL}/ghost/#/setup/two`);
     cy.get("#blog-title").type("MyFirstBlog");
     cy.get("#name").type("Juan José Montenegro Pulido");
     cy.get("#email").type("correoDePrueba@gmail.com");

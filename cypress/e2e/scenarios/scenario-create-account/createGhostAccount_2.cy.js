@@ -1,6 +1,6 @@
 describe("Create a ghost account scenery 2", () => {
+  const baseURL = Cypress.env("baseURL");
   it("Visits Ghost Web application", () => {
-    const baseURL = Cypress.env("baseURL");
     cy.viewport(1280, 720);
     cy.visit(`${baseURL}/ghost/#/setup/two`);
     cy.get("#blog-title").type("MyFirstBlog");
