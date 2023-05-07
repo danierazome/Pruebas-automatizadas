@@ -15,7 +15,7 @@ describe("Create a ghost account scenery 4", () => {
     cy.wait(3000);
     cy.visit(`${baseURL}/ghost/#/signout`);
     cy.get("#ember8").type("correoDePrueba@gmail.com");
-    cy.get("#ember10").type("@Pnqeeec0123*");
+    cy.get("#ember10").type("@1234567890*");
     cy.wait(2000);
     cy.get("#ember12").click();
   });
