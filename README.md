@@ -6,4 +6,5 @@
 2. Crear nuevo tag
 3. Personalizar información general
 4. Importar miembros
-5. Crear nueva página
+  4.1 Cargar archivo csv con los miembros siguiendo la plantilla de ejemplo
+6. Crear nueva página
