@@ -1,11 +1,11 @@
 /// <reference types="cypress" />
 
-context( "Import Member", () => {
-    beforeEach( () => {
-        cy.visit("http://localhost:2368/ghost");
-    })
-
+context( "Import Member", () => {    
     it( "import member", () => {
+        // Given
+        cy.visit("http://localhost:2368/ghost");
+
+        // When
         cy.get("#identification").type("lrozoq@gmail.com");
         cy.get("#password").type("LicethYaneth:3");
         cy.get("button").contains(/Sign/).click({ force: true });
@@ -18,6 +18,9 @@ context( "Import Member", () => {
             cy.get("a[data-test-link='import-csv']").click();
             importCSV("cypress/fixtures/member-import-template-v2.csv");
         }
+
+        // Then
+        cy.get("table").should("exist")
     })
 })
 
