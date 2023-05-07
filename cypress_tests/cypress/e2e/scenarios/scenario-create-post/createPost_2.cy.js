@@ -4,8 +4,8 @@ describe("Create a post scenario 2 ", () => {
     // LogIn page
     cy.visit("http://localhost:2368/ghost/#/signin");
     // LogingIn
-    cy.get("#ember8").type("correoDePrueba@gmail.com");
-    cy.get("#ember10").type("@1234567890*");
+    cy.get("#ember8").type("correoDePrueba@gmail.com", { force: true });
+    cy.get("#ember10").type("@1234567890*", { force: true });
     cy.wait(1000);
     cy.get("#ember12").click();
     cy.visit("http://localhost:2368/ghost/#/site");
