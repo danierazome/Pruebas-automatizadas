@@ -3,7 +3,8 @@
 describe("Import members with CSV file", () => {
     context("Given: Access web site", () => {
         beforeEach( () => {
-            cy.visit("http://localhost:2369/ghost");
+            const baseURL = Cypress.env("baseURL");
+            cy.visit(`${baseURL}/ghost`);
         });
 
         context("When: Validate whether the members have been saved correctly through a CSV file", () => {
