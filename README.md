@@ -1,10 +1,7 @@
-# Pruebas-automatizadas
-
-## Funcionalidades
-
-1. Escribir post para un sitio web
-2. Crear nuevo tag
-3. Personalizar información general
-4. Importar miembros
-  4.1 Cargar archivo csv con los miembros siguiendo la plantilla de ejemplo
-6. Crear nueva página
+| Funcionalidades        | Nombre de escenario |
+|-----------------------|---------------------|
+| Escribir post          | Escenario 1         |
+| Crear nuevo tag        | Escenario 2         |
+| Personalizar información general| Escenario 3         |
+| Importar miembros      | Cargar archivo csv con los miembros siguiendo la plantilla de ejemplo         |
+| Crear nueva página     | Escenario 5         |
