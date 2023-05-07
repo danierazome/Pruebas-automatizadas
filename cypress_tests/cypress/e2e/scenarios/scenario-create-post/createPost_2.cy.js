@@ -2,20 +2,18 @@ describe("Create a post scenario 2 ", () => {
   it("Visits Ghost Web application", () => {
     cy.viewport(1280, 720);
     // LogIn page
-    cy.visit("http://localhost:2368/ghost/#/signin");
+    cy.visit("${baseURL}/ghost/#/signin");
     // LogingIn
     cy.get("#ember8").type("correoDePrueba@gmail.com", { force: true });
     cy.get("#ember10").type("@1234567890*", { force: true });
     cy.wait(1000);
     cy.get("#ember12").click();
-    cy.visit("http://localhost:2368/ghost/#/site");
+    cy.visit("${baseURL}/ghost/#/site");
     // expand Posts Section
     cy.wait(2000);
     cy.get("#ember28").click();
     cy.wait(2000);
-    cy.get('a[href="#/editor/post/"]').visit(
-      "http://localhost:2368/ghost/#/editor/post/"
-    );
+    cy.get('a[href="#/editor/post/"]').visit("${baseURL}/ghost/#/editor/post/");
     cy.wait(2000);
     cy.get("textarea[tabindex=1]").type("Segundo Post de prueba con cypress");
     cy.wait(1000);
@@ -36,8 +34,8 @@ describe("Create a post scenario 2 ", () => {
     cy.wait(1000);
     cy.get("button").contains("span", "Publish").click();
     cy.wait(1000);
-    cy.get('a[href="#/posts/"]').visit("http://localhost:2368/ghost/#/posts");
+    cy.get('a[href="#/posts/"]').visit("${baseURL}/ghost/#/posts");
     cy.wait(1000);
-    cy.visit("http://localhost:2368/ghost/#/site");
+    cy.visit("${baseURL}/ghost/#/site");
   });
 });
