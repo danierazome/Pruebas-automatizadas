@@ -236,4 +236,65 @@ Se comprueba que el botón "Saved" existe en la página obteniendo un resultado 
 ![image](https://user-images.githubusercontent.com/124526219/236735829-fc149ba2-603f-409d-b7f2-f73bac34fd1a.png)
 
 
+## FUNCIONALIDAD 6: CREAR PAGINA
+
+### Escenario: 01- Crear pagina inmediatamente.
+
+Dado que se accede al sitio web, se ingresa a la página de inicio de sesión en la dirección http://localhost:2369/ghost/#/signin, y se proporcionan las credenciales de inicio de sesión.
+
+Cuando se navega a la página de configuración en la dirección http://localhost:2369/ghost/#/pages/.
+
+Se hace clic en el botón para crear una nueva página.
+
+Se selecciona el área de texto para agregar el título de la nueva página y se escribe el título.
+
+Se selecciona el campo de descripción y se escribe el texto de la descripción.
+
+Se hace clic en el botón para publicar la página.
+
+Se hace clic en el botón para configurar la publicación de la página.
+
+Se hace clic en el botón para publicar la página inmediatamente.
+
+Se hace clic en el botón para confirmar la publicación.
+
+Se hace clic en el botón para volver al editor de páginas.
+
+Se hace clic en el enlace para volver a la sección de "Páginas".
+
+Se verifica que la página creada se encuentre en la lista de páginas obteniendo un resultado POSITIVO
+
+![image](https://user-images.githubusercontent.com/124526219/236736518-0c9ae180-1e16-4704-a737-f1e26f336489.png)
+
+
+### Escenario: 02- Crear pagina programada.
+
+Dado que se accede al sitio web, se ingresa a la página de inicio de sesión en la dirección http://localhost:2369/ghost/#/signin, y se proporcionan las credenciales de inicio de sesión.
+
+Cuando se navega a la página de configuración en la dirección http://localhost:2369/ghost/#/pages/.
+
+Se hace clic en el botón para crear una nueva página.
+
+Se selecciona el área de texto para agregar el título de la nueva página y se escribe el título.
+
+Se selecciona el campo de descripción y se escribe el texto de la descripción.
+
+Se hace clic en el botón para publicar la página.
+
+Se hace clic en el botón para configurar la publicación de la página.
+
+Se hace clic en el botón para publicar la página en un hora programada en la cual se puede escoger.
+
+Se hace clic en el botón para confirmar la publicación.
+
+Se hace clic en el botón para volver al editor de páginas.
+
+Se hace clic en el enlace para volver a la sección de "Páginas".
+
+Se verifica que la página creada se encuentre en la lista de páginas obteniendo un resultado POSITIVO
+
+![image](https://user-images.githubusercontent.com/124526219/236736796-3956706d-09e8-472b-a222-0c96fedc9930.png)
+
+
+
 
