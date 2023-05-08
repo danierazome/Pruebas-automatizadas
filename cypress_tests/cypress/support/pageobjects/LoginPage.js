@@ -1,20 +1,21 @@
+const env = Cypress.env();
 class LoginPage {
     visitLoginPage() {
         const baseURL = Cypress.env("baseURL");
         cy.visit(`${baseURL}/ghost`);
     }
 
-    fillEmailLogin(value) {
+    fillEmailLogin() {
         const field = cy.get("#identification");
         field.clear();
-        field.type(value);
+        field.type(env.credentials.email);
         return this;
     }
 
-    fillPasswordLogin(value) {
+    fillPasswordLogin() {
         const field = cy.get("#password");
         field.clear();
-        field.type(value);
+        field.type(env.credentials.password);
         return this;
     }
 

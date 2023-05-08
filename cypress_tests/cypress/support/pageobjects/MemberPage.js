@@ -1,7 +1,7 @@
 class MemberPage {
 
     goToMemberPage() {
-        cy.get("a").contains(/Members/).click();
+        cy.get("a[href='#/members/']").click();
     }
 
     validateExistMembers() {
