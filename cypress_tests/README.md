@@ -322,7 +322,7 @@ Se verifica que el tag creado se encuentre en la lista de tags obteniendo un res
 ![image](https://user-images.githubusercontent.com/124526219/236737543-f0d622f1-3e6e-47e9-9d52-5410d33ff8d6.png)
 
 
-## FUNCIONALIDAD 7: ELIMINAR PAGINA
+## FUNCIONALIDAD 8: ELIMINAR PAGINA
 
 ### Escenario: 01- Eliminar Pagina.
 
@@ -338,8 +338,43 @@ Se hace clic en el boton 'Delete Page'.
 
 Se hace clic en la confirmacion de la eliminación.
 
-Se verifica que la pagina se no encuentre en la lista de tags obteniendo un resultado NEGATIVO
+Se verifica que la pagina se no encuentre en la lista de paginas obteniendo un resultado NEGATIVO
 ![image](https://user-images.githubusercontent.com/124526219/236738114-81ed6cc8-fa6b-4478-aa9d-083b5530e264.png)
+
+
+## FUNCIONALIDAD 9: ELIMINAR TAG
+
+### Escenario: 01- Eliminar Tag.
+
+Dado que se accede al sitio web, se ingresa a la página de inicio de sesión en la dirección http://localhost:2369/ghost/#/signin, y se proporcionan las credenciales de inicio de sesión.
+
+Cuando se navega a la página de configuración en la dirección http://localhost:2369/ghost/#/tags/.
+
+Se hace clic en el tag que se desea eliminar
+
+Se hace clic en el boton 'Delete Tag'.
+
+Se hace clic en la confirmacion de la eliminación.
+
+Se verifica que el tag se no encuentre en la lista de tags obteniendo un resultado NEGATIVO
+![image](https://user-images.githubusercontent.com/124526219/236738539-4f222f8f-381c-4221-a1b7-ff8b9efad9d4.png)
+
+## FUNCIONALIDAD 10: FALLO ENVIO CORREO DE RECUPERACION
+
+### Escenario: 01- Fallo Envio Correo de Recuperacion.
+
+Dado que se accede al sitio web, se ingresa a la página de inicio de sesión en la dirección http://localhost:2369/ghost/#/signin, y el correo electronico con el que se registro.
+
+Se hace clic en el Boton 'Forgot?'.
+
+Se visualiza un mensaje 'Failed to send email. Reason: Sending failed'.
+
+Se valida que el mensaje exista obteniendo un resultado NEGATIVO.
+
+![image](https://user-images.githubusercontent.com/124526219/236738998-4d5f8267-c16a-4107-8ccc-b9637f038b82.png)
+
+
+
 
 
 
