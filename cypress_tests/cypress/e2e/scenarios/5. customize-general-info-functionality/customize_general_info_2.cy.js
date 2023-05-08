@@ -7,8 +7,8 @@ describe("Change publication information regarding timezone and language", () =>
         });
         context("When: Go to the Settings page and save the timezone and language of the website. ", () => {
             beforeEach(() => {
-                LoginPage.fillEmailLogin("lrozoq@gmail.com");
-                LoginPage.fillPasswordLogin("I*%^sC!7B65Z");
+                LoginPage.fillEmailLogin();
+                LoginPage.fillPasswordLogin();
                 LoginPage.clickFormLogin();
                 cy.get("a[href='#/settings/']").click();
                 cy.get("a[href='#/settings/general/']").click();

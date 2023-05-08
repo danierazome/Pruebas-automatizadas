@@ -14,7 +14,7 @@ Cypress es un framework de pruebas automatizadas para aplicaciones web. Se utili
 
 - Node v14.21.3 
 
-- cypress v16.20.0
+- cypress v12.11.0
 
 
 

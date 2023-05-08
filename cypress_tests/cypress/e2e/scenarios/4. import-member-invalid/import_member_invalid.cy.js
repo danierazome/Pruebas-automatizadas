@@ -11,8 +11,8 @@ describe("Import members with CSV file invalid", () => {
 
         context("When: Validate member records saved correctly via CSV with invalid email", () => {
             beforeEach( () => {
-                LoginPage.fillEmailLogin("lrozoq@gmail.com");
-                LoginPage.fillPasswordLogin("I*%^sC!7B65Z");
+                LoginPage.fillEmailLogin();
+                LoginPage.fillPasswordLogin();
                 LoginPage.clickFormLogin();
                 MemberPage.goToMemberPage();
                 MemberPage.importInvalidCSV();
