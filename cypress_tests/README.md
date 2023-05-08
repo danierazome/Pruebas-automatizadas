@@ -4,7 +4,7 @@
 Cypress es un framework de pruebas automatizadas para aplicaciones web. Se utiliza comúnmente para realizar pruebas de extremo a extremo en aplicaciones web. Permite simular interacciones de usuarios, como hacer clic en botones, ingresar texto en campos de formulario y navegar por diferentes páginas. Además, Cypress proporciona una amplia gama de funciones y comandos que facilitan la escritura de pruebas robustas y mantenibles.
 
 
-## Aplicación Objetivo de pruebas
+## Aplicación Objetivo de pruebas![image](https://user-images.githubusercontent.com/124526219/236736518-0c9ae180-1e16-4704-a737-f1e26f336489.png)
 
 - Ghost v 5.41.0 
 
@@ -299,7 +299,7 @@ Se verifica que la página creada se encuentre en la lista de páginas obteniend
 
 ## FUNCIONALIDAD 7: CREAR TAG
 
-### Escenario: 01- Crear tag inmediatamente.
+### Escenario: 01- Crear tag.
 
 Dado que se accede al sitio web, se ingresa a la página de inicio de sesión en la dirección http://localhost:2369/ghost/#/signin, y se proporcionan las credenciales de inicio de sesión.
 
@@ -321,6 +321,25 @@ Se verifica que el tag creado se encuentre en la lista de tags obteniendo un res
 
 ![image](https://user-images.githubusercontent.com/124526219/236737543-f0d622f1-3e6e-47e9-9d52-5410d33ff8d6.png)
 
+
+## FUNCIONALIDAD 7: ELIMINAR PAGINA
+
+### Escenario: 01- Eliminar Pagina.
+
+Dado que se accede al sitio web, se ingresa a la página de inicio de sesión en la dirección http://localhost:2369/ghost/#/signin, y se proporcionan las credenciales de inicio de sesión.
+
+Cuando se navega a la página de configuración en la dirección http://localhost:2369/ghost/#/pages/.
+
+Se hace clic en la pagina que se desea eliminar.
+
+Se hace clic en el boton de Settings de la pagina.
+
+Se hace clic en el boton 'Delete Page'.
+
+Se hace clic en la confirmacion de la eliminación.
+
+Se verifica que la pagina se no encuentre en la lista de tags obteniendo un resultado NEGATIVO
+![image](https://user-images.githubusercontent.com/124526219/236738114-81ed6cc8-fa6b-4478-aa9d-083b5530e264.png)
 
 
 
