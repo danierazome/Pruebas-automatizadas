@@ -24,6 +24,11 @@ Cypress es un framework de pruebas automatizadas para aplicaciones web. Se utili
 
 - Crear Post nuevo
 
+Santiago Sierra
+Liceth Yaneth
+Juan José Montenegro
+Las herramientas utilizadas para el desarrollo de las pruebas E2E fueron:
+Cypress
 - Personalizar información general
 
 - Importar miembros
@@ -146,5 +151,20 @@ se obtura el botón de publish y se obtiene un resultado POSITIVO
 
 ![Captura de pantalla 2023-05-07 210315](https://user-images.githubusercontent.com/124220935/236720678-062a380e-4a20-4cdd-af3f-132de11d1060.png)
 
+## FUNCIONALIDAD 3: IMPORTAR MIEMBROS DESDE UN ARCHIVO CSV
+
+### Escenario: 01- Importar miembros desde un archivo csv.
+
+se ingresa a la pagina: http://localhost:2369/ghost/#/singin, logueando el usuario
+
+se dirige a la pagina http://localhost:2369/ghost/#/members para cargar los miembros mediante un csv
+
+se abre una ventana emergente para cargar los miembros
+
+se valida que sean los miembros y se da en el boton Imports Members
+
+se cargan los archivos y se valida que la tabla exista obteniendo un resultado POSITIVO
+
+![image](https://user-images.githubusercontent.com/124526219/236733944-f9721d24-49ca-4bbd-8b69-3f768108b707.png)
 
 
