@@ -8,7 +8,5 @@ Este es el repositorio de pruebas automatizadas del grupo de:
 
  ## Las herramientas utilizadas para el desarrollo de las pruebas E2E fueron:
 
-### Cypress
-### Kraken
-
-a continuación, encontrará una carpeta por herramienta en donde encontrará las funcionalidades y los escenarios de prueba evaluados.
+### [Cypress](/cypress_tests)
+### [Kraken](/kraken_tests)
