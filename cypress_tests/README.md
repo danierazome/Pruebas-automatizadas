@@ -188,4 +188,52 @@ Se valida que el miembro con el nombre "Juan Perez" no se haya creado en la tabl
 ![image](https://user-images.githubusercontent.com/124526219/236734605-6e6bd689-838b-4384-baff-24ff17cff821.png)
 
 
+## FUNCIONALIDAD 5: PERSONALIZAR INFORMACION GENERAL
+
+### Escenario: 01- Personalizar titulo y descripción del sitio web.
+
+Dado que se accede al sitio web, se ingresa a la página de inicio de sesión en la dirección http://localhost:2369/ghost/#/signin, y se proporcionan las credenciales de inicio de sesión.
+
+Cuando se navega a la página de configuración en la dirección http://localhost:2369/ghost/#/settings/general/, se hace clic en el botón "Expand" para ver las opciones de título y descripción.
+
+Se borra el texto existente en los campos de título y descripción, y se escribe "New Title Test" y "New Description Test" respectivamente.
+
+Se hace clic en el botón "Save" para guardar los cambios.
+
+Entonces se valida que se muestra el mensaje "Saved" y se hace clic en el botón "View site" para ir a la página del sitio.
+
+Finalmente, se verifica que el título del sitio se ha actualizado a "New Title Test" obteniendo un resultado POSITIVO.
+
+![image](https://user-images.githubusercontent.com/124526219/236735275-cd30dde5-1c8f-4a68-88d0-c3796437083f.png)
+
+
+### Escenario: 02- Personalizar zona horaria y lenguaje de publicación del sitio web.
+
+Se ingresa a la página de inicio de sesión en la dirección http://localhost:2369/ghost/#/signin, y se ingresa el nombre de usuario y la contraseña.
+
+Se hace clic en el enlace de la página de configuración.
+
+Se hace clic en el enlace de la configuración general.
+
+Se hace clic en el botón de cambio de zona horaria.
+
+Se selecciona "America/Bogota" en la lista desplegable de la zona horaria.
+
+Se hace clic de nuevo en el botón de cambio de zona horaria.
+
+Se hace clic en el botón de cambio de idioma.
+
+Se borra el campo de idioma y se escribe "es".
+
+Se hace clic de nuevo en el botón de cambio de idioma.
+
+Se hace clic en el botón "Save".
+
+Se crea una prueba con el nombre "Then: should validate timezone".
+
+Se comprueba que el botón "Saved" existe en la página obteniendo un resultado POSITIVO.
+
+![image](https://user-images.githubusercontent.com/124526219/236735829-fc149ba2-603f-409d-b7f2-f73bac34fd1a.png)
+
+
 
