@@ -297,4 +297,31 @@ Se verifica que la página creada se encuentre en la lista de páginas obteniend
 
 
 
+## FUNCIONALIDAD 7: CREAR TAG
+
+### Escenario: 01- Crear tag inmediatamente.
+
+Dado que se accede al sitio web, se ingresa a la página de inicio de sesión en la dirección http://localhost:2369/ghost/#/signin, y se proporcionan las credenciales de inicio de sesión.
+
+Cuando se navega a la página de configuración en la dirección http://localhost:2369/ghost/#/tags/.
+
+Se hace clic en el botón para crear un nuevo tag.
+
+Se selecciona el área de texto para agregar el nombre del tag y se escribe el nombre.
+
+Se selecciona el campo de color y se escribe el color del tag.
+
+Se selecciona el campo de slug y se escribe el slug del tag.
+
+Se selecciona el campo de descripcion y se escribe el descripcion del tag.
+
+Se hace clic en el botón Save.
+
+Se verifica que el tag creado se encuentre en la lista de tags obteniendo un resultado POSITIVO
+
+![image](https://user-images.githubusercontent.com/124526219/236737543-f0d622f1-3e6e-47e9-9d52-5410d33ff8d6.png)
+
+
+
+
 
