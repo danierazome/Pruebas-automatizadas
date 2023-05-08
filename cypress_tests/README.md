@@ -24,6 +24,11 @@ Cypress es un framework de pruebas automatizadas para aplicaciones web. Se utili
 
 - Crear Post nuevo
 
+Santiago Sierra
+Liceth Yaneth
+Juan José Montenegro
+Las herramientas utilizadas para el desarrollo de las pruebas E2E fueron:
+Cypress
 - Personalizar información general
 
 - Importar miembros
@@ -145,6 +150,42 @@ Se llenan los dos campos, y se procede a crear el post importando la imagen del 
 se obtura el botón de publish y se obtiene un resultado POSITIVO
 
 ![Captura de pantalla 2023-05-07 210315](https://user-images.githubusercontent.com/124220935/236720678-062a380e-4a20-4cdd-af3f-132de11d1060.png)
+
+## FUNCIONALIDAD 3: IMPORTAR MIEMBROS DESDE UN ARCHIVO CSV
+
+### Escenario: 01- Importar miembros desde un archivo csv.
+
+se ingresa a la pagina: http://localhost:2369/ghost/#/singin, logueando el usuario
+
+se dirige a la pagina http://localhost:2369/ghost/#/members para cargar los miembros mediante un csv
+
+se abre una ventana emergente para cargar los miembros
+
+se valida que sean los miembros y se da en el boton Imports Members
+
+se cargan los archivos y se valida que la tabla exista obteniendo un resultado POSITIVO
+
+![image](https://user-images.githubusercontent.com/124526219/236733944-f9721d24-49ca-4bbd-8b69-3f768108b707.png)
+
+## FUNCIONALIDAD 4: IMPORTAR MIEMBROS DESDE UN ARCHIVO CSV INVALIDO
+
+### Escenario: 01- Importar miembros desde un archivo csv invalido.
+
+Se ingresa a la página de inicio de sesión en la dirección http://localhost:2369/ghost/#/signin, y se ingresa el nombre de usuario y la contraseña.
+
+Se dirige a la página de miembros en la dirección http://localhost:2369/ghost/#/members para cargar los miembros mediante un archivo CSV.
+
+Se abre una ventana emergente para cargar los miembros.
+
+Se valida que los miembros en el archivo CSV se carguen correctamente en la tabla de miembros.
+
+Se hace clic en el botón "Import Members" para importar los miembros del archivo CSV.
+
+Se valida que la tabla de miembros exista obteniendo un resultado POSITIVO.
+
+Se valida que el miembro con el nombre "Juan Perez" no se haya creado en la tabla de miembros debido a la dirección de correo electrónico no válida en el archivo CSV.
+
+![image](https://user-images.githubusercontent.com/124526219/236734605-6e6bd689-838b-4384-baff-24ff17cff821.png)
 
 
 
