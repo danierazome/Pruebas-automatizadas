@@ -12,8 +12,8 @@ describe("Import members with CSV file", () => {
 
         context("When: Validate whether the members have been saved correctly through a CSV file", () => {
             beforeEach( () => {
-                LoginPage.fillEmailLogin("lrozoq@gmail.com");
-                LoginPage.fillPasswordLogin("I*%^sC!7B65Z");
+                LoginPage.fillEmailLogin();
+                LoginPage.fillPasswordLogin();
                 LoginPage.clickFormLogin();
                 MemberPage.goToMemberPage();
                 MemberPage.importCSV();
