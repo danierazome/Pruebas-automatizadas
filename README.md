@@ -28,8 +28,7 @@ Cypress es un framework de pruebas automatizadas para aplicaciones web. Se utili
 
 - Importar miembros
 
-- Editar información de perfil 
-
+- Crear página
  
 
 ## Pasos para poder ejecutar los escenarios de pruebas con la herramienta Kraken 
