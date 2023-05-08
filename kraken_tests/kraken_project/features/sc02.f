@@ -28,7 +28,7 @@ Scenario: Crear Post y eliminar el post creado
   And I wait for 3 seconds
   And I click a btn "Click in the settings btn" 'button[title="Settings"]'
   And I wait for 3 seconds
-  And I click a btn "Click in the settings btn" 'button[class="gh-btn gh-btn-hover-red gh-btn-icon settings-menu-delete-button"]'
+  And I click a btn "Click in the settings btn" 'div[class="settings-menu-delete-button"]'
   And I wait for 3 seconds
   Then I click a btn "Click in the settings btn" 'button[class="gh-btn gh-btn-red gh-btn-icon ember-view"]'
   And I wait for 3 seconds
