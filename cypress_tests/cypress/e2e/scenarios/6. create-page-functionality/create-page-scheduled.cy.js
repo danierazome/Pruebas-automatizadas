@@ -1,11 +1,11 @@
 import LoginPage from "../../../support/pageobjects/LoginPage";
 
-describe("Create new page on website", () => {
+describe("Create new page on website scheduled", () => {
     context("Given: Access web site", () => {
         beforeEach(() => {
             LoginPage.visitLoginPage();
         });
-        context("When: Go to Pages section and create a new page. ", () => {
+        context("When: Go to Pages section and create a new page scheduled. ", () => {
             beforeEach(() => {
                 LoginPage.fillEmailLogin();
                 LoginPage.fillPasswordLogin();
@@ -22,7 +22,7 @@ describe("Create new page on website", () => {
                 cy.get('button[data-test-button="close-publish-flow"]').click();
                 cy.get('a[href="#/pages/"]').click();
             });
-            it("Then: should see the created page", () => {
+            it("Then: should see the created page scheduled", () => {
                 cy.contains("Nueva Pagina de Prueba Programada").eq(0).should("exist");
             });
         });
