@@ -692,7 +692,7 @@ Then: Se hace click en el botón guardar
 
 
 
-### Activar o desactivar el modo oscuro.
+### Escenario: 20- Activar o desactivar el modo oscuro.
   Given: I navigate to page "http://localhost:2368/ghost/#/signin"
 
   And: I wait for 5 seconds
@@ -707,5 +707,5 @@ Then: Se hace click en el botón guardar
 
 
   And: I click a button "Click on the General page" 'div[class="nightshift-toggle-container"]'
-  
+
   And: I wait for 3 seconds
