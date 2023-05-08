@@ -1,7 +1,7 @@
 const { Given, When, Then } = require("@cucumber/cucumber");
 
-const email = "danielerazoiin@gmail.com";
-const password = "Udea191919";
+const email = "usuario@dominio.com";
+const password = "MiPasswordAsombroso";
 
 When("I log in", async function () {
   let elementEmail = await this.driver.$("#identification");
