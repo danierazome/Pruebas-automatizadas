@@ -37,7 +37,23 @@ Kraken es una herramienta de código abierto para realizar pruebas automáticas 
 
 - Buscar Tags 
 
-- Editar información de perfil 
+- Editar información de perfil
+
+- Crear un nuevo miembro
+
+- Editar un miembro
+
+- Eliminar un miembro
+
+- Crear una nueva pagina
+
+- Editar una nueva pagina
+
+- Editar la zona horaria de la pagina
+
+- Editar el idioma de las publicaciones de la página.
+
+- Activar o desactivar el modo oscuro
 
  
 
@@ -328,3 +344,368 @@ And: Se actualiza el nombre del perfil
 Then: Se hace click en el botón guardar  
 
  
+### Escenario: 11- Crear un nuevo miembro 
+  Given: I navigate to page "http://localhost:2368/ghost/#/signin"
+
+  And: I wait for 5 seconds
+
+  When: I log in
+
+  And: I wait for 5 seconds
+
+  And: I navigate to page "http://localhost:2368/ghost/#/members"
+
+  And: I wait for 2 seconds
+
+  And: I click a button "Click on the new member option" 'a[href="#/members/new/"]'
+
+  And: I wait for 3 seconds
+
+  And: I fill with text a field "Fill Member Name" 'input[class="ember-text-field gh-input ember-view"]' "Jhon Doe"
+
+  And: I wait for 3 seconds
+
+  And: I fill with text a field "Fill Member Email" 'input[id="member-email"]' "test@test.com"
+
+  And: I wait for 3 seconds
+
+  And: I fill with text a field "Fill Member Email" 'textarea[id="member-note"]' "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
+
+  And: I wait for 3 seconds
+
+  And: I click a button "Click on save btn" 'button[class="gh-btn gh-btn-primary gh-btn-icon ember-view"]'
+
+  And: I wait for 3 seconds
+
+  And: I navigate to page "http://localhost:2368/ghost/#/members"
+
+  And: I wait for 3 seconds
+
+
+
+### Escenario: 12- Editar un miembro
+  Given: I navigate to page "http://localhost:2368/ghost/#/signin"
+
+  And: I wait for 5 seconds
+
+  When: I log in
+  
+  And: I wait for 5 seconds
+
+  And: I navigate to page "http://localhost:2368/ghost/#/members"
+
+  And: I wait for 2 seconds
+
+  And: I click a button "Click on the created member" 'h3[class="ma0 pa0 gh-members-list-name "]'
+
+  And: I wait for 2 seconds
+
+  And: I fill with text a field "Fill Member Name" 'input[class="ember-text-field gh-input ember-view"]' "Alice Doe"
+
+  And: I wait for 3 seconds
+
+  And: I fill with text a field "Fill Member Email" 'input[id="member-email"]' "alice@doe.com"
+
+  And: I wait for 3 seconds
+
+  And: I click a button "Click on save btn" 'button[class="gh-btn gh-btn-primary gh-btn-icon ember-view"]'
+
+  And: I wait for 3 seconds
+
+  And: I navigate to page "http://localhost:2368/ghost/#/members"
+
+  And: I wait for 3 seconds
+
+
+
+
+### Escenario: 13- Eliminar un miembro
+  Given: I navigate to page "http://localhost:2368/ghost/#/signin"
+
+  And: I wait for 5 seconds
+
+  When: I log in
+
+  And: I wait for 5 seconds
+
+  And: I navigate to page "http://localhost:2368/ghost/#/members"
+
+  And: I wait for 2 seconds
+  
+  And: I click a button "Click on the new member option" 'h3[class="ma0 pa0 gh-members-list-name "]'
+
+  And: I wait for 2 seconds
+
+  And: I click a button "Click on the settings member option" 'button[class="gh-btn gh-btn-icon icon-only gh-btn-action-icon closed ember-view"]'
+
+  And: I wait for 3 seconds
+
+  And: I click a button "Click on the delete member option" 'button[data-test-button="delete-member"]'
+
+  And: I wait for 3 seconds
+
+  And: I click a button "Click on the delete member option" 'button[data-test-button="confirm"]'
+
+  And: I wait for 3 seconds
+
+  And: I navigate to page "http://localhost:2368/ghost/#/members"
+
+  And: I wait for 3 seconds
+
+
+
+### Escenario: 14- Crear una nueva pagina
+  Given: I navigate to page "http://localhost:2368/ghost/#/signin"
+
+  And: I wait for 5 seconds
+
+  When: I log in
+
+  And: I wait for 5 seconds
+
+  And: I navigate to page "http://localhost:2368/ghost/#/pages"
+
+  And: I wait for 2 seconds
+
+  And: I click a button "Click on the new page option" 'a[href="#/editor/page/"]'
+
+  And: I wait for 3 seconds
+
+  And: I fill with text a field "Fill Page title" 'textarea[placeholder="Page title"]' "Test Page"
+
+  And: I wait for 3 seconds
+  
+  And: I fill with text a field "Fill Page content" 'div[data-placeholder="Begin writing your page..."]' "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
+
+  And: I wait for 3 seconds
+
+  And: I click a button "Click on publish btn" 'button[class="gh-btn gh-btn-editor darkgrey gh-publish-trigger"]'
+
+  And: I wait for 3 seconds
+
+  And: I click a button "Click on confirm btn" 'button[data-test-button="continue"]'
+
+  And: I wait for 3 seconds
+
+  And: I navigate to page "http://localhost:2368/ghost/#/pages"
+
+  And: I wait for 3 seconds
+
+
+
+### Escenario: 15- Editar una nueva pagina
+  Given: I navigate to page "http://localhost:2368/ghost/#/signin"
+
+  And: I wait for 5 seconds
+
+  When: I log in
+
+  And: I wait for 5 seconds
+
+  And: I navigate to page "http://localhost:2368/ghost/#/pages"
+
+  And: I wait for 2 seconds
+
+  And: I click a button "Click on the created member" 'h3[class="gh-content-entry-title"]'
+  
+  And: I wait for 2 seconds
+
+  And: I fill with text a field "Fill Page title" 'textarea[placeholder="Page title"]' "Test Page EDITED"
+
+  And: I wait for 3 seconds
+
+  And: I fill with text a field "Fill Page content" 'div[data-placeholder="Begin writing your page..."]' "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+
+  And: I wait for 3 seconds
+
+  And: I click a button "Click on publish btn" 'button[class="gh-btn gh-btn-editor darkgrey gh-publish-trigger"]'
+
+  And: I wait for 3 seconds
+
+  And: I click a button "Click on confirm btn" 'button[data-test-button="continue"]'
+
+  And: I wait for 3 seconds
+
+  And: I navigate to page "http://localhost:2368/ghost/#/pages"
+
+  And: I wait for 3 seconds
+
+
+
+### Escenario: 16- Eliminar una pagina creada 
+  Given: I navigate to page "http://localhost:2368/ghost/#/signin"
+
+  And: I wait for 5 seconds
+
+  When: I log in
+
+  And: I wait for 5 seconds
+
+  And: I navigate to page "http://localhost:2368/ghost/#/pages"
+
+  And: I wait for 2 seconds
+
+  And: I click a button "Click on the created page" 'h3[class="gh-content-entry-title"]'
+
+  And: I wait for 2 seconds
+
+  And: I click a button "Click on the Settings button" 'button[title="Settings"]'
+
+  And: I wait for 3 seconds
+
+  And: I click a button "Click on the delete button" 'button[class="gh-btn gh-btn-outline gh-btn-icon gh-btn-fullwidth"]'
+
+  And: I wait for 3 seconds
+
+  And: I click a button "Click on the delete confirm button" 'button[class="gh-btn gh-btn-red gh-btn-icon ember-view"]'
+
+  And: I wait for 3 seconds
+
+  And: I navigate to page "http://localhost:2368/ghost/#/pages"
+
+  And: I wait for 3 seconds
+
+
+
+### Escenario: 17- Editar un titulo y descripción del sitio
+  Given: I navigate to page "http://localhost:2368/ghost/#/signin"
+
+  And: I wait for 5 seconds
+
+  When: I log in
+
+  And: I wait for 5 seconds
+
+  And: I navigate to page "http://localhost:2368/ghost/#/settings"
+
+  And: I wait for 2 seconds
+
+  And: I click a button "Click on the General page" 'a[href="#/settings/general/"]'
+
+  And: I wait for 2 seconds
+
+  And: I click a button "Click on the expand button" 'button[data-test-toggle-pub-info]'
+
+  And: I wait for 2 seconds
+
+  And: I fill with text a field "Edit Site title" 'input[data-test-title-input]' "Test Site Name EDITED"
+  
+  And: I wait for 2 seconds
+
+  And: I fill with text a field "Edit Site description" 'input[data-test-description-input]' "Testing 1, 2, 3, Done"
+
+  And: I wait for 2 seconds
+
+  And: I click a button "Click on the Save button" 'button[data-test-button="save"]'
+
+  And: I wait for 2 seconds
+
+  And: I navigate to page "http://localhost:2368/ghost/#/settings"
+
+  And: I wait for 2 seconds
+
+  And: I click a button "Click on the General page" 'a[href="#/settings/general/"]'
+
+  And: I wait for 2 seconds
+
+
+
+### Escenario: 18- Editar la zona horaria de la pagina
+  Given: I navigate to page "http://localhost:2368/ghost/#/signin"
+
+  And: I wait for 5 seconds
+
+  When: I log in
+
+  And: I wait for 5 seconds
+
+  And: I navigate to page "http://localhost:2368/ghost/#/settings"
+
+  And: I wait for 2 seconds
+
+  And: I click a button "Click on the General page" 'a[href="#/settings/general/"]'
+
+  And: I wait for 2 seconds
+
+  And: I click a button "Click on the expand button" 'button[data-test-toggle-timezone]'
+
+  And: I wait for 2 seconds
+
+  And: I click a button "Click on the expand timezone menu" 'select[name="general[timezone]"]'
+
+  And: I wait for 2 seconds
+
+  And: I click a button "Click on the timezone" 'option[value="America/Bogota"]'
+
+  And: I wait for 2 seconds
+
+  And: I click a button "Click on the Save button" 'button[data-test-button="save"]'
+
+  And: I wait for 2 seconds
+
+  And: I navigate to page "http://localhost:2368/ghost/#/settings"
+
+  And: I wait for 2 seconds
+
+  And: I click a button "Click on the General page" 'a[href="#/settings/general/"]'
+
+  And: I wait for 2 seconds
+
+
+
+### Escenario: 19- Editar el idioma de las publicaciones de la página.
+  Given: I navigate to page "http://localhost:2368/ghost/#/signin"
+
+  And: I wait for 5 seconds
+
+  When: I log in
+
+  And: I wait for 5 seconds
+
+  And: I navigate to page "http://localhost:2368/ghost/#/settings"
+
+  And: I wait for 2 seconds
+
+  And: I click a button "Click on the General page" 'a[href="#/settings/general/"]'
+
+  And: I wait for 2 seconds
+
+  And: I click a button "Click on the expand button" 'button[data-test-toggle-lang]'
+
+  And: I wait for 2 seconds
+
+  And: I fill with text a field "Edit Site title" 'input[data-test-input="locale"]' "es-test"
+
+  And: I wait for 2 seconds
+
+  And: I click a button "Click on the Save button" 'button[data-test-button="save"]'
+
+  And: I wait for 2 seconds
+
+  And: I navigate to page "http://localhost:2368/ghost/#/settings"
+
+  And: I wait for 2 seconds
+
+  And: I click a button "Click on the General page" 'a[href="#/settings/general/"]'
+
+  And: I wait for 2 seconds
+
+
+
+### Activar o desactivar el modo oscuro.
+  Given: I navigate to page "http://localhost:2368/ghost/#/signin"
+
+  And: I wait for 5 seconds
+
+  When: I log in
+
+  And: I wait for 5 seconds
+
+  And: I click a button "Click on the General page" 'div[class="nightshift-toggle-container"]'
+
+  And: I wait for 3 seconds
+
+
+  And: I click a button "Click on the General page" 'div[class="nightshift-toggle-container"]'
+  
+  And: I wait for 3 seconds
