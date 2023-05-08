@@ -59,8 +59,6 @@ Cypress es un framework de pruebas automatizadas para aplicaciones web. Se utili
 
 se ingresa a la página: http://localhost:2369/ghost/#/setup/two
 
-Se llenan los dos campos, y se procede a crear el post
-
 se obtura el botón de submit y se obtiene un resultado NEGATIVO
 
 ![Captura de pantalla 2023-05-07 191436](https://user-images.githubusercontent.com/124220935/236719462-433a888e-2aa0-4d5a-82bf-ca3326dd1364.png)
@@ -72,7 +70,7 @@ se obtura el botón de submit y se obtiene un resultado NEGATIVO
 
 se ingresa a la página: http://localhost:2369/ghost/#/setup/two
 
-Se llenan los dos campos, y se procede a crear el post
+Se llenan los campos necesarios (correo con formato incorrecto)
 
 se obtura el botón de submit y se obtiene un resultado NEGATIVO
 
@@ -85,7 +83,7 @@ se obtura el botón de submit y se obtiene un resultado NEGATIVO
 
 se ingresa a la página: http://localhost:2369/ghost/#/setup/two
 
-Se llenan los dos campos, y se procede a crear el post
+Se llena el campo de la contraseña de manera incorrecta
 
 se obtura el botón de submit y se obtiene un resultado NEGATIVO
 
@@ -98,7 +96,7 @@ se obtura el botón de submit y se obtiene un resultado NEGATIVO
 
 se ingresa a la página: http://localhost:2369/ghost/#/setup/two
 
-Se llenan los dos campos, y se procede a crear el post
+Se llenan los campos de manera correcta
 
 se obtura el botón de submit y se obtiene un resultado POSITIVO, logrando entrar a la aplicación.
 
