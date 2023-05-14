@@ -4,7 +4,7 @@ Feature: Testing ghost app
 Scenario: Crear Post y revisar que existe
   Given I navigate to page "http://localhost:2368/ghost/#/signin"
   And I wait for 5 seconds
-  When I log in
+  When I log in 'input[class="gh-input email"]' 'input[class="gh-input password"]' 'button[class="login gh-btn gh-btn-login gh-btn-block gh-btn-icon ember-view"]'
   And I wait for 5 seconds
   And I click a button "Click post btn in lateral menu" 'a[class="ember-view gh-secondary-action gh-nav-new-post"]'
   And I wait for 5 seconds
@@ -27,3 +27,4 @@ Scenario: Crear Post y revisar que existe
   And I wait for 3 seconds
   Then I click a btn "Click the search result" 'li[class="ember-power-select-option"]'
   And I wait for 3 seconds
+  Then I change sshots names

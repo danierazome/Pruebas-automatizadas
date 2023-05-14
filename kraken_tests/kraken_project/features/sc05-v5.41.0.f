@@ -4,7 +4,7 @@ Feature: Testing ghost app
 Scenario: Crear Tag y borrar el tag creado
   Given I navigate to page "http://localhost:2368/ghost/#/signin"
   And I wait for 5 seconds
-  When I log in
+  When I log in 'input[class="gh-input email"]' 'input[class="gh-input password"]' 'button[class="login gh-btn gh-btn-login gh-btn-block gh-btn-icon ember-view"]'
   And I wait for 5 seconds
   And I navigate to page "http://localhost:2368/ghost/#/tags"
   And I wait for 2 seconds
@@ -29,3 +29,4 @@ Scenario: Crear Tag y borrar el tag creado
   And I click a button "Click in delete tag btn" 'button[data-test-button="confirm"]'
   And I wait for 3 seconds
   Then I navigate to page "http://localhost:2368/ghost/#/tags"
+  Then I change sshots names

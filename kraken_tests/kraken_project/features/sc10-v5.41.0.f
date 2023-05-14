@@ -4,7 +4,7 @@ Feature: Testing ghost app
 Scenario: Editar información del perfil
   Given I navigate to page "http://localhost:2368/ghost/#/signin"
   And I wait for 5 seconds
-  When I log in
+  When I log in 'input[class="gh-input email"]' 'input[class="gh-input password"]' 'button[class="login gh-btn gh-btn-login gh-btn-block gh-btn-icon ember-view"]'
   And I wait for 5 seconds
   And I navigate to page "http://localhost:2368/ghost/#/site"
   And I wait for 2 seconds
@@ -16,3 +16,4 @@ Scenario: Editar información del perfil
   And I wait for 3 seconds
   Then I click a button "Click in save profile" 'button[data-test-save-button=""]'
   And I wait for 3 seconds
+  Then I change sshots names
