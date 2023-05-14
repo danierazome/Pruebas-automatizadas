@@ -1,5 +1,5 @@
-import LoginPage from "../../../support/pageobjects/LoginPage";
-import CreatePage from "../../../support/pageobjects/CreatePage";
+import LoginPage from "../../../../support/pageobjects/LoginPage";
+import CreatePage from "../../../../support/pageobjects/CreatePage";
 
 describe("Create delete page on website", () => {
     context("Given: Access web site", () => {
