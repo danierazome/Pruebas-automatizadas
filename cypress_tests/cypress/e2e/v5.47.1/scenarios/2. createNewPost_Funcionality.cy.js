@@ -51,4 +51,23 @@ describe("Create a ghost new Post Functionality", () => {
     cy.contains(CONSTANTS.POST_CONTENT);
   })
 
+  it("Write a post for the website created by attaching a selected image on the unsplash",()=>{
+    
+    // Given that I am logged into my Ghost account
+    LoginPage.visitLoginPage();
+    LoginPage.fillEmailLogin();
+    LoginPage.fillPasswordLogin();
+    LoginPage.clickFormLogin();
+    cy.visit(`${ghostUrl}/ghost/#/site`);
+
+    // When I write and publish a new post with an image
+    CreateNewPost.writePost(CONSTANTS.POST_TITLE, CONSTANTS.POST_CONTENT)
+    CreateNewPost.addImageUnplash(CONSTANTS.IMAGE)
+    CreateNewPost.publishPost()
+    
+    // Then I should see the post published on the website with the image attached
+    cy.contains(CONSTANTS.POST_TITLE);
+    cy.contains(CONSTANTS.POST_CONTENT);
+  })
+
 })

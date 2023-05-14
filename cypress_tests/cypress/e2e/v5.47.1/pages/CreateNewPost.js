@@ -25,5 +25,12 @@ class CreateNewPost{
         cy.get("input[type=file]").invoke("show").selectFile(image, { force: true });
         cy.wait(1000);
     }
+    addImageUnplash(){
+        cy.get("textarea[data-test-editor-title-input]").click();
+        cy.wait(1000);
+        cy.get("svg[fill='currentColor']").click();
+        cy.get("a[class=gh-unsplash-button]").first().click();
+        cy.wait(1000);
+    }
 }
 export default new CreateNewPost();
