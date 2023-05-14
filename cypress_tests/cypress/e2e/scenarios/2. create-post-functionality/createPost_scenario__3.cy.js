@@ -1,18 +1,17 @@
+import LoginPage from "../../../support/pageobjects/LoginPage";
 describe("Create a post third scenario", () => {
   const baseURL = Cypress.env("baseURL");
   it("Visits Ghost Web application", () => {
     cy.viewport(1280, 720);
     // LogIn page
-    cy.visit(`${baseURL}/ghost/#/signin`);
+    LoginPage.visitLoginPage();
     // LogingIn
-    cy.get("#ember8").type("correoDePrueba@gmail.com", { force: true });
-    cy.get("#ember10").type("@1234567890*", { force: true });
-    cy.wait(1000);
-    cy.get("#ember12").click();
+    LoginPage.fillEmailLogin();
+    LoginPage.fillPasswordLogin();
+    LoginPage.clickFormLogin();
+
     cy.visit(`${baseURL}/ghost/#/site`);
     // expand Posts Section
-    cy.wait(2000);
-    cy.get("#ember28").click();
     cy.wait(2000);
     cy.get(`a[href="#/editor/post/"]`).visit(`${baseURL}/ghost/#/editor/post/`);
     cy.wait(2000);
@@ -24,18 +23,16 @@ describe("Create a post third scenario", () => {
         "Esta es una prueba de publicación del post incluyendo una imagen del unsplash."
       );
 
-    cy.get(".post-settings").click();
+    cy.get("textarea[data-test-editor-title-input]").click();
     cy.wait(1000);
-
-    cy.get("div[class=gh-image-uploader-unsplash]").click({ force: true });
+    cy.get("svg[fill='currentColor']").click();
     cy.get("a[class=gh-unsplash-button]").first().click();
     cy.wait(1000);
-    cy.get("button[aria-label=Close").click({ force: true });
-    cy.contains("span", "Publish").click();
+    cy.get("button[data-test-button='publish-flow']").click();
     cy.wait(1000);
-    cy.get("button").contains("span", "Publish").click();
+    cy.get("button[data-test-button='continue']").click();
     cy.wait(1000);
-    cy.get(`a[href="#/posts/"]`).visit(`${baseURL}/ghost/#/posts`);
+    cy.get("button[data-test-button='confirm-publish']").click();
     cy.wait(1000);
     cy.visit(`${baseURL}/ghost/#/site`);
   });

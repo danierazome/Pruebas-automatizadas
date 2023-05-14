@@ -1,4 +1,5 @@
 import LoginPage from "../../../support/pageobjects/LoginPage";
+import CreateTag from "../../../support/pageobjects/CreateTag";
 
 describe("Create new tag on website", () => {
     context("Given: Access web site", () => {
@@ -6,21 +7,18 @@ describe("Create new tag on website", () => {
             LoginPage.visitLoginPage();
         });
         context("When: Go to Tags section and create a new tag. ", () => {
+            const timestamp = Date.now();
+            const tagName = `Tag ${timestamp}`;
+            
             beforeEach(() => {
                 LoginPage.fillEmailLogin();
                 LoginPage.fillPasswordLogin();
                 LoginPage.clickFormLogin();
-                cy.get("a[href='#/tags/']").click();
-                cy.get("a[href='#/tags/new/']").click();
-                cy.get("input[data-test-input='tag-name']").type("Nuevo Tag de Prueba");
-                cy.get("input[data-test-input='accentColor']").type("123123");
-                cy.get('input[data-test-input="tag-slug"]').type("new-tag");
-                cy.get('textarea[data-test-input="tag-description"]').type("Esto es un tag de prueba con una descripcion corta");
-                cy.get("button").contains(/Save/).click();
-                cy.get("a[href='#/tags/']").eq(0).click();
+                CreateTag.newTag(tagName);
+               
             });
             it("Then: should see the created page", () => {
-                cy.contains("Nuevo Tag de Prueba").eq(0).should("exist");
+                cy.contains(tagName).eq(0).should("exist");
             });
         });
     });
