@@ -1,6 +1,6 @@
 class CreatePage{
     writeNewPage(pageTitle){
-        cy.get("a[href='#/pages/']").eq(0).click();
+        cy.get("a[href='#/pages/']").first().click();
         cy.get("a[href='#/editor/page/']").click();
         cy.get("textarea[placeholder='Page title']").type(pageTitle);
         cy.get("p").invoke("text","Esto es una nueva descripción para la pagina");
