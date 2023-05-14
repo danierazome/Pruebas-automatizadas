@@ -1,4 +1,4 @@
-const ghostUrl = Cypress.env("baseURL");
+const ghostUrl = Cypress.env("ghostV3");
 
 class LogInPage {
     elements = {

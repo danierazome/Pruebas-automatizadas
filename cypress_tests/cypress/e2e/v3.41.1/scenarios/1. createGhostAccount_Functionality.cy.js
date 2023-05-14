@@ -2,7 +2,7 @@ import { signInPage } from "../pages/signInPage";
 import { loginPage } from "../pages/logInPage";
 import PARAMETERS from "../../parameters";
 
-const ghostUrl = Cypress.env("baseURL");
+const ghostUrl = Cypress.env("ghostV3");
 
 const CONSTANTS = {
   ERROR_LABELS: [
