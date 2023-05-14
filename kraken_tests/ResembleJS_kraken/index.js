@@ -44,8 +44,8 @@ async function generateReportInformation(numberOfImages) {
     reports.push({
       isSameDimensions: data.isSameDimensions,
       misMatchPercentage: data.misMatchPercentage,
-      oldImagePath: `./old-version/${i}.jpg`,
-      newImagePath: `./new-version/${i}.jpg`,
+      oldImagePath: `./old-version/${i}.png`,
+      newImagePath: `./new-version/${i}.png`,
       resultImage: data.getImageDataUrl(),
       index: i,
     });
@@ -75,10 +75,13 @@ function getMismatchPercentageAverage(numberOfImages, misMatchPercentageSum) {
 function getScreenshotsAmount() {
   const oldScreenShots = fs.readdirSync(old_version_dir_path).length;
   const newScreenShots = fs.readdirSync(new_version_dir_path).length;
-  if (oldScreenShots === newScreenShots) {
-    return oldScreenShots;
-  } else {
+
+  if (oldScreenShots === 0 || newScreenShots === 0) {
     return 0;
+  } else if (oldScreenShots >= newScreenShots) {
+    return newScreenShots;
+  } else {
+    return oldScreenShots;
   }
 }
 

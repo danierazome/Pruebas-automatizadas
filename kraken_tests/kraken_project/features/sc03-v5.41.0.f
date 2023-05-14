@@ -1,10 +1,10 @@
 Feature: Testing ghost app
 
 @user2 @web
-Scenario: Buscar post creado previamente y despublicarlo
+Scenario: Buscar post creado previamente y editarlo
   Given I navigate to page "http://localhost:2368/ghost/#/signin"
   And I wait for 5 seconds
-  When I log in
+  When I log in 'input[class="gh-input email"]' 'input[class="gh-input password"]' 'button[class="login gh-btn gh-btn-login gh-btn-block gh-btn-icon ember-view"]'
   And I wait for 5 seconds
   And I navigate to page "http://localhost:2368/ghost/#/site"
   And I wait for 2 seconds
@@ -12,16 +12,16 @@ Scenario: Buscar post creado previamente y despublicarlo
   And I wait for 3 seconds
   And I fill with text a field "Fill in with post name" 'input[class="gh-input-with-select-input"]' "pp pos"
   And I wait for 3 seconds
-  And I fill with text a field "Fill in with post name" 'input[class="gh-input-with-select-input"]' "Tercer Post"
+  And I fill with text a field "Fill in with post name" 'input[class="gh-input-with-select-input"]' "Primer Post"
   And I wait for 3 seconds
   And I click a btn "Click the search result" 'li[class="ember-power-select-option"]'
   And I wait for 3 seconds
-  And I click a button "Click in unpublish btn" 'button[data-test-button="update-flow"]'
+  And I fill with text a field "Fill Post title" 'textarea[class="gh-editor-title ember-text-area gh-input ember-view"]' "Tercer Post"
   And I wait for 2 seconds
-  And I click a button "Click a revert to draft btn" 'button[data-test-button="revert-to-draft"]'
+  And I fill with text a post desc "Este es mi tercer post"
   And I wait for 2 seconds
-  And I navigate to page "http://localhost:2368/ghost/#/posts?type=draft"
+  And I click a button "Click a publish btn" 'button[data-test-button="publish-save"]'
   And I wait for 2 seconds
-  Then I click a button "Click in the drafted post" 'a[class="ember-view permalink gh-list-data gh-post-list-title"]'
+  Then I navigate to page "http://localhost:2368/ghost/#/site"
   And I wait for 2 seconds
   Then I change sshots names

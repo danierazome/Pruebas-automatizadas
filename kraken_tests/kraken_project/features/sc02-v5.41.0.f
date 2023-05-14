@@ -4,7 +4,7 @@ Feature: Testing ghost app
 Scenario: Crear Post y eliminar el post creado
   Given I navigate to page "http://localhost:2368/ghost/#/signin"
   And I wait for 5 seconds
-  When I log in
+  When I log in 'input[class="gh-input email"]' 'input[class="gh-input password"]' 'button[class="login gh-btn gh-btn-login gh-btn-block gh-btn-icon ember-view"]'
   And I wait for 5 seconds
   And I click a button "Click post btn in lateral menu" 'a[class="ember-view gh-secondary-action gh-nav-new-post"]'
   And I fill with text a field "Fill Post title" 'textarea[class="gh-editor-title ember-text-area gh-input ember-view"]' "Segundo Post"

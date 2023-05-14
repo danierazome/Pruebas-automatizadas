@@ -1,20 +1,23 @@
 const { Given, When, Then } = require("@cucumber/cucumber");
-const fs = require('fs')
+const fs = require("fs");
 
-const email = "s.sierrar2@uniandes.edu.co";
-const password = "And3sP@Krak3n2023";
+const email = "danielerazoiin@gmail.com";
+const password = "Udea191919";
 
-When("I log in", async function () {
-  let elementEmail = await this.driver.$("#identification");
-  await elementEmail.setValue(email);
+When(
+  "I log in {string} {string} {string}",
+  async function (emailSelector, passwordSelector, submitSelector) {
+    let elementEmail = await this.driver.$(emailSelector);
+    await elementEmail.setValue(email);
 
-  let elementPassword = await this.driver.$("#password");
-  await elementPassword.setValue(password);
+    let elementPassword = await this.driver.$(passwordSelector);
+    await elementPassword.setValue(password);
 
-  let elementBtn = await this.driver.$("#ember5");
+    let elementBtn = await this.driver.$(submitSelector);
 
-  return await elementBtn.click();
-});
+    return await elementBtn.click();
+  }
+);
 
 When(
   "I click a button {string} {string}",
@@ -62,15 +65,16 @@ Then("I click enter", async function () {
   document.body.dispatchEvent(event);
 });
 
-Then("I change sshots names", async function(){
-  console.log(this.testScenarioId)
-  let sshots_folder = (`./reports/${this.testScenarioId}/screenshots/`);
+Then("I change sshots names", async function () {
+  console.log(this.testScenarioId);
+  let sshots_folder = `./reports/${this.testScenarioId}/screenshots/`;
   let contador = 1;
-  fs.readdirSync(sshots_folder).forEach(file => {
-    fs.renameSync(sshots_folder + "/" + file, sshots_folder + "/" + contador + ".png");
-    contador ++;
+  fs.readdirSync(sshots_folder).forEach((file) => {
+    fs.renameSync(
+      sshots_folder + "/" + file,
+      sshots_folder + "/" + contador + ".png"
+    );
+    contador++;
     console.log(file);
-  })
-
-
+  });
 });
