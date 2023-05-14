@@ -1,5 +1,4 @@
-import PARAMETERS from "../../e2e/parameters";
-const env = Cypress.env();
+import PARAMETERS from "../../parameters";
 const baseURL = Cypress.env("baseURL");
 
 class LoginPage {
