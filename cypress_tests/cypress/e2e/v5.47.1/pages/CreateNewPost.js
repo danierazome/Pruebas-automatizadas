@@ -17,5 +17,13 @@ class CreateNewPost{
         cy.get("button[data-test-button='confirm-publish']").click();
  
     }
+
+    addImage(image){
+        cy.get("textarea[data-test-editor-title-input]").click()
+        cy.get("button").contains("span", "Add feature image").click();
+        cy.wait(1000);
+        cy.get("input[type=file]").invoke("show").selectFile(image, { force: true });
+        cy.wait(1000);
+    }
 }
 export default new CreateNewPost();

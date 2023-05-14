@@ -4,7 +4,8 @@ import CreateNewPost from "../pages/CreateNewPost";
 const ghostUrl = Cypress.env("baseURL");
 const CONSTANTS = {
     POST_TITLE: "Test post title",
-    POST_CONTENT: "Test post content"
+    POST_CONTENT: "Test post content",
+    IMAGE:  "cypress/fixtures/logo.png"
   };
 
 describe("Create a ghost new Post Functionality", () => {
@@ -19,7 +20,7 @@ describe("Create a ghost new Post Functionality", () => {
     cy.visit(`${ghostUrl}/ghost/#/site`);
     cy.wait(3000);
 
-    // When I visit the Posts published page
+    // When I write and publish a new post
     CreateNewPost.writePost(CONSTANTS.POST_TITLE, CONSTANTS.POST_CONTENT)
     CreateNewPost.publishPost()
     cy.screenshot();
@@ -28,5 +29,26 @@ describe("Create a ghost new Post Functionality", () => {
     cy.contains(CONSTANTS.POST_TITLE);
     cy.contains(CONSTANTS.POST_CONTENT);
   });
+
+
+  it("Write a post for the website created by attaching an image from my device",()=>{
+        
+    // Given that I am logged into my Ghost account
+    LoginPage.visitLoginPage();
+    LoginPage.fillEmailLogin();
+    LoginPage.fillPasswordLogin();
+    LoginPage.clickFormLogin();
+    cy.wait(1000);
+    cy.visit(`${ghostUrl}/ghost/#/site`);
+    
+    // When I write and publish a new post with an image
+    CreateNewPost.writePost(CONSTANTS.POST_TITLE, CONSTANTS.POST_CONTENT)
+    CreateNewPost.addImage(CONSTANTS.IMAGE)
+    CreateNewPost.publishPost()
+
+    // Then I should see the post published on the website with the image attached
+    cy.contains(CONSTANTS.POST_TITLE);
+    cy.contains(CONSTANTS.POST_CONTENT);
+  })
 
 })
