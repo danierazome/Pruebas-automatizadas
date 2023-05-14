@@ -1,4 +1,4 @@
-import LoginPage from "../../../support/pageobjects/LoginPage";
+import LoginPage from "../../../../support/pageobjects/LoginPage";
 
 describe("Create new page on website scheduled", () => {
     context("Given: Access web site", () => {

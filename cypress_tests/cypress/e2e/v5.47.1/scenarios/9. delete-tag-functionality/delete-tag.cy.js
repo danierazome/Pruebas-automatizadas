@@ -1,5 +1,5 @@
-import LoginPage from "../../../support/pageobjects/LoginPage";
-import CreateTag from "../../../support/pageobjects/CreateTag";
+import LoginPage from "../../../../support/pageobjects/LoginPage";
+import CreateTag from "../../../../support/pageobjects/CreateTag";
 
 describe("Create delete tag on website", () => {
     context("Given: Access web site", () => {

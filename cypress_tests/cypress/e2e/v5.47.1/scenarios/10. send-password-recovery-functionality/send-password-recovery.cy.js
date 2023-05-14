@@ -1,4 +1,4 @@
-import LoginPage from "../../../support/pageobjects/LoginPage";
+import LoginPage from "../../../../support/pageobjects/LoginPage";
 
 describe("Verify that a password recovery message is not sent when the recovery process is initiated but not completed", () => {
     context("Given: Access web site", () => {

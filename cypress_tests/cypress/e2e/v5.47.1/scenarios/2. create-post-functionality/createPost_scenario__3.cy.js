@@ -1,4 +1,5 @@
-import LoginPage from "../../../support/pageobjects/LoginPage";
+import LoginPage from "../../../../support/pageobjects/LoginPage";
+
 describe("Create a post third scenario", () => {
   const baseURL = Cypress.env("baseURL");
   it("Visits Ghost Web application", () => {

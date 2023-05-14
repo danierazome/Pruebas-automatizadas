@@ -1,4 +1,4 @@
-import LoginPage from "../../../support/pageobjects/LoginPage";
+import LoginPage from "../../../../support/pageobjects/LoginPage";
 
 describe("Change publication information regarding timezone and language", () => {
     context("Given: Access web site", () => {

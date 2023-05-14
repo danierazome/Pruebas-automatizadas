@@ -1,4 +1,4 @@
-import PARAMETERS from "../../parameters";
+import PARAMETERS from "../../e2e/parameters";
 const env = Cypress.env();
 const baseURL = Cypress.env("baseURL");
 
