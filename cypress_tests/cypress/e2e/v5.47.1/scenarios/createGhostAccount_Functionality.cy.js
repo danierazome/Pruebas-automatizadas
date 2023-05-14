@@ -6,6 +6,7 @@ const ghostUrl = Cypress.env("baseURL");
 const CONSTANTS={
   MAIN_ERROR_LABEL:"Please fill out every field correctly to set up your site.",
   INVALID_EMAIL_ERROR: "Invalid Email.",
+  INVALID_PASSWORD_ERROR: "Password must be at least 10 characters long"
 }
 describe("Create a ghost account Functionality", () => {
 
@@ -68,7 +69,7 @@ describe("Create a ghost account Functionality", () => {
     cy.get("button[data-test-button='setup']").click();
     
     // Then I should see an error message
-    cy.contains("Password must be at least 10 characters long")
+    cy.contains(CONSTANTS.INVALID_PASSWORD_ERROR)
   })
 
   // scenario -> Create an account in Ghost by entering all fields correctly.
