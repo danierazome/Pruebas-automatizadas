@@ -17,8 +17,7 @@ beforeEach(() => {
 
 // Sixth Functionality -> tag management functionality
 
-describe("Import members with CSV file", () => {
- 
+describe("Manage ghost application tags", () => {
   // First scenary -> Create a new tag
 
   it("Should create a new tag.", () => {
@@ -28,12 +27,18 @@ describe("Import members with CSV file", () => {
       CONSTANTS.TAG_IMAGE,
       CONSTANTS.TAG_DESCRIPTION
     );
-    tagsManagementPage.elements.saveButton().contains("span","Saved").should("be.visible");
+    tagsManagementPage.elements
+      .saveButton()
+      .contains("span", "Saved")
+      .should("be.visible");
+    cy.wait(500);
+    cy.screenshot(`v3-${Cypress.currentTest.titlePath.join("/")}/step`);
   });
 
   // Second scenary -> Delete a tag
 
   it("Should delete a tag created.", () => {
-    tagsManagementPage.deleteTag();
+    tagsManagementPage.deleteTag();    
+    cy.screenshot(`v3-${Cypress.currentTest.titlePath.join("/")}/step`);
   });
 });
