@@ -17,7 +17,6 @@ describe("Create a ghost account Functionality", () => {
   });
 
 
-  // scenario -> Create Ghost account with empty registration fields
   it("Create Ghost account with empty registration fields", () => {
     // Given that I am on the Ghost sign-up page
 
@@ -37,7 +36,6 @@ describe("Create a ghost account Functionality", () => {
   });
 
 
-  // scenario -> Create Ghost account with incorrect email format
   it("Create Ghost account with incorrect email format", () => {
     
     // Given that I am on the Ghost sign-up page
@@ -55,7 +53,6 @@ describe("Create a ghost account Functionality", () => {
   });
 
 
-  // scenario -> Create a Ghost account with a very short password
   it("Create a Ghost account with a very short password",()=>{
     
     // Given that I am on the Ghost sign-up page
@@ -72,7 +69,6 @@ describe("Create a ghost account Functionality", () => {
     cy.contains(CONSTANTS.INVALID_PASSWORD_ERROR)
   })
 
-  // scenario -> Create an account in Ghost by entering all fields correctly.
   it("Create an account in Ghost by entering all fields correctly", () => {
     
     // Given that I am on the Ghost sign-up page
