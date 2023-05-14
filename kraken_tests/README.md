@@ -106,7 +106,7 @@ codigoDelEscenario-VersionDelAplicativo
 4. Se lanza el comando npm install para que descargue las librerias necesarias para compilar el proyecto de ResembleJS_kraken
 5. Se copia los screenshots generados en el paso 1 para el escenario x en el proyecto de ResembleJS_kraken en la ubicación  ResembleJS_kraken/scenario/old-version y los screenshots generados en el paso 2 para el escenario x en la carpeta ResembleJS_kraken/scenario/new-version
 6. Se ejecuta el comando npm index.js para correr las pruebas de regresion visual
-7. Se dirigue a ResembleJS_kraken/report/<FechaDeEjecucionDeLaRegresionVisual>
+7. Se dirigue a ResembleJS_kraken/report/*FechaDeEjecucionDeLaRegresionVisual*
  8. Se abre el report.html para visualizar el resultado de las pruebas
                                                                            
  
