@@ -16,23 +16,6 @@ describe("Create a ghost account Functionality", () => {
   });
 
 
-  // scenario -> Create Ghost account with incorrect email format
-  it("Create Ghost account with incorrect email format", () => {
-    
-    // Given that I am on the Ghost sign-up page
-    cy.visit(`${ghostUrl}/ghost/#/setup`);
-
-    // When I enter an incorrect email address
-    SignInPage.createAccount(PARAMETERS.BLOG_NAME,
-      PARAMETERS.USER_NAME,
-      PARAMETERS.WRONG_FORMAT_EMAIL,
-      PARAMETERS.USER_PASSWORD)
-
-    // Then I should see an error message
-    cy.contains(CONSTANTS.INVALID_EMAIL_ERROR);
-  });
-
-
   // scenario -> Create Ghost account with empty registration fields
   it("Create Ghost account with empty registration fields", () => {
     // Given that I am on the Ghost sign-up page
@@ -52,6 +35,41 @@ describe("Create a ghost account Functionality", () => {
 
   });
 
+
+  // scenario -> Create Ghost account with incorrect email format
+  it("Create Ghost account with incorrect email format", () => {
+    
+    // Given that I am on the Ghost sign-up page
+    cy.visit(`${ghostUrl}/ghost/#/setup`);
+
+    // When I enter an incorrect email address
+    SignInPage.createAccount(PARAMETERS.BLOG_NAME,
+      PARAMETERS.USER_NAME,
+      PARAMETERS.WRONG_FORMAT_EMAIL,
+      PARAMETERS.USER_PASSWORD)
+
+    // Then I should see an error message
+    cy.get("button[data-test-button='setup']").click();
+    cy.contains(CONSTANTS.INVALID_EMAIL_ERROR);
+  });
+
+
+  // scenario -> Create a Ghost account with a very short password
+  it("Create a Ghost account with a very short password",()=>{
+    
+    // Given that I am on the Ghost sign-up page
+    cy.visit(`${ghostUrl}/ghost/#/setup`);
+    
+    // When I enter a very short password
+    SignInPage.createAccount(PARAMETERS.BLOG_NAME,
+      PARAMETERS.USER_NAME,
+      PARAMETERS.USER_EMAIL,
+      PARAMETERS.WRONG_FORMAT_PASSWORD)
+    cy.get("button[data-test-button='setup']").click();
+    
+    // Then I should see an error message
+    cy.contains("Password must be at least 10 characters long")
+  })
 
   // scenario -> Create an account in Ghost by entering all fields correctly.
   it("Create an account in Ghost by entering all fields correctly", () => {
