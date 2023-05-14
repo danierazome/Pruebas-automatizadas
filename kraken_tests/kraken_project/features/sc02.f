@@ -32,3 +32,4 @@ Scenario: Crear Post y eliminar el post creado
   And I wait for 3 seconds
   Then I click a btn "Click in the settings btn" 'button[class="gh-btn gh-btn-red gh-btn-icon ember-view"]'
   And I wait for 3 seconds
+  Then I change sshots names

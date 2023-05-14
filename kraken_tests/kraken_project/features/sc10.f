@@ -16,3 +16,4 @@ Scenario: Editar información del perfil
   And I wait for 3 seconds
   Then I click a button "Click in save profile" 'button[data-test-save-button=""]'
   And I wait for 3 seconds
+  Then I change sshots names

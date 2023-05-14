@@ -10,3 +10,4 @@ Scenario: Buscar post creado previamente por nombre de tag
   And I wait for 2 seconds
   Then I click a button "Click in the post found by tag" 'a[class="ember-view permalink gh-list-data gh-post-list-title"]'
   And I wait for 2 seconds
+  Then I change sshots names

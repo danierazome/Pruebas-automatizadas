@@ -20,3 +20,4 @@ Scenario: Editar el idioma de las publicaciones de la página.
   And I wait for 2 seconds
   And I click a button "Click on the General page" 'a[href="#/settings/general/"]'
   And I wait for 2 seconds
+  Then I change sshots names

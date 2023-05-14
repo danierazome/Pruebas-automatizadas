@@ -1,7 +1,8 @@
 const { Given, When, Then } = require("@cucumber/cucumber");
+const fs = require('fs')
 
-const email = "usuario@dominio.com";
-const password = "MiPasswordAsombroso";
+const email = "s.sierrar2@uniandes.edu.co";
+const password = "And3sP@Krak3n2023";
 
 When("I log in", async function () {
   let elementEmail = await this.driver.$("#identification");
@@ -59,4 +60,17 @@ Then(
 Then("I click enter", async function () {
   const event = new KeyboardEvent("keydown", { key: "Enter" });
   document.body.dispatchEvent(event);
+});
+
+Then("I change sshots names", async function(){
+  console.log(this.testScenarioId)
+  let sshots_folder = (`./reports/${this.testScenarioId}/screenshots/`);
+  let contador = 1;
+  fs.readdirSync(sshots_folder).forEach(file => {
+    fs.renameSync(sshots_folder + "/" + file, sshots_folder + "/" + contador + ".png");
+    contador ++;
+    console.log(file);
+  })
+
+
 });

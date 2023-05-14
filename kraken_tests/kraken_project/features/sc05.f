@@ -29,3 +29,4 @@ Scenario: Crear Tag y borrar el tag creado
   And I click a button "Click in delete tag btn" 'button[data-test-button="confirm"]'
   And I wait for 3 seconds
   Then I navigate to page "http://localhost:2368/ghost/#/tags"
+  Then I change sshots names

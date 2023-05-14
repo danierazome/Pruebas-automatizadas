@@ -24,3 +24,4 @@ Scenario: Buscar post creado previamente y despublicarlo
   And I wait for 2 seconds
   Then I click a button "Click in the drafted post" 'a[class="ember-view permalink gh-list-data gh-post-list-title"]'
   And I wait for 2 seconds
+  Then I change sshots names

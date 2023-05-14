@@ -29,4 +29,5 @@ Scenario: Editar tag creado previamente y rastrearlo con el buscador
   And I fill with text a field "Fill in with post name" 'input[class="gh-input-with-select-input"]' "Tag numero 3"
   And I wait for 3 seconds
   Then I click a btn "Click the search result" 'li[class="ember-power-select-option"]'
-  And I wait for 3 seconds 
+  And I wait for 3 seconds
+  Then I change sshots names

@@ -27,3 +27,4 @@ Scenario: Crear Post y revisar que existe
   And I wait for 3 seconds
   Then I click a btn "Click the search result" 'li[class="ember-power-select-option"]'
   And I wait for 3 seconds
+  Then I change sshots names

@@ -28,3 +28,4 @@ Scenario: Buscar post creado previamente y editarlo asignado un tag creado previ
   And I wait for 3 seconds
   Then I navigate to page "http://localhost:2368/ghost/#/site"
   And I wait for 3 seconds
+  Then I change sshots names

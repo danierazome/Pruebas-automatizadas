@@ -20,4 +20,4 @@ Scenario: Crear una nueva pagina y validar que existe
   And I wait for 3 seconds
   And I navigate to page "http://localhost:2368/ghost/#/pages"
   And I wait for 3 seconds
-  
+  Then I change sshots names
