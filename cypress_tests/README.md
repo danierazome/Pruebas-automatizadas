@@ -24,22 +24,24 @@ Cypress es un framework de pruebas automatizadas para aplicaciones web. Se utili
 
 - Crear Post nuevo
 
-Santiago Sierra
-Liceth Yaneth
-Juan José Montenegro
-Las herramientas utilizadas para el desarrollo de las pruebas E2E fueron:
-Cypress
-- Personalizar información general
-
 - Importar miembros
 
+- Personalizar información general
+
+- Crear Tag
+
+- Elimiar tag
+
 - Crear página
+
+- Eliminar página
+
+- Modulo de contraseñas olvidadas
  
 
 ## Pasos para poder ejecutar los escenarios de pruebas con la herramienta Cypress 
 
  
-
 ### Preparación del ambiente 
 
 1. Descargar el repositorio https://github.com/danierazome/Pruebas-automatizadas de la rama master 
