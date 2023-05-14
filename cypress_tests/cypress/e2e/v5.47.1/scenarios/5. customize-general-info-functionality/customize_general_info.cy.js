@@ -1,4 +1,4 @@
-import LoginPage from "../../../support/pageobjects/LoginPage";
+import LoginPage from "../../../../support/pageobjects/LoginPage";
 
 describe("Change publication information regarding title and description", () => {
     context("Given: Access web site", () => {

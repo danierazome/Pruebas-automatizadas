@@ -1,4 +1,4 @@
-import LoginPage from "../../../support/pageobjects/LoginPage";
+import LoginPage from "../../../../support/pageobjects/LoginPage";
 
 describe("Create a ghost post scenary 1", () => {
   const baseURL = Cypress.env("baseURL");
@@ -27,6 +27,7 @@ describe("Create a ghost post scenary 1", () => {
     cy.get("button").contains("Publish").click({ force: true }); 
     cy.get("button[data-test-button='continue']").click();
     cy.get("button[data-test-button='confirm-publish']").click();
+    cy.screenshot();
     cy.get("a[data-test-complete-bookmark]").click();   
   });
 });

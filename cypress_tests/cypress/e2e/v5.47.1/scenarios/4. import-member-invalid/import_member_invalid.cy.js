@@ -1,7 +1,7 @@
 /// <reference  types="cypress" />
 
-import LoginPage from "../../../support/pageobjects/LoginPage";
-import MemberPage from "../../../support/pageobjects/MemberPage";
+import LoginPage from "../../../../support/pageobjects/LoginPage";
+import MemberPage from "../../../../support/pageobjects/MemberPage";
 
 describe("Import members with CSV file invalid", () => {
     context("Given: Access web site", () => {
