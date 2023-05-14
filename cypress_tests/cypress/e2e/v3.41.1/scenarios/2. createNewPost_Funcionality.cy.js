@@ -45,7 +45,7 @@ describe("Create ghost account Functionality", () => {
 
 //   Third scenary -> Create a post including an image from unsplash
 
-  it("Should create a post including an image", () => {
+  it("Should create a post including an image from unsplash", () => {
     
     createNewPostPage.elements.settingsButton().click();    
     createNewPostPage.elements.addUnsplashImagebutton().click();
@@ -55,4 +55,24 @@ describe("Create ghost account Functionality", () => {
     createNewPostPage.elements.notification().should("be.visible");
     
   });  
+
+  // Fourth scenary -> Create a post without tilte
+
+  it("Should create a post with title (Untitled) when there is no input in title field", () => {
+    
+    createNewPostPage.createPost("", CONSTANTS.POST_CONTENT);
+    createNewPostPage.elements.notification().should("be.visible");
+
+    createNewPostPage.elements.postTitleInput().should("have.value", "(Untitled)");
+    
+  });
+
+  // Fifth scenary -> can not be possible to create a post with out content
+
+  it("Should not be possible to create a post with out content", () => {
+    
+    createNewPostPage.elements.postTitleInput().type(CONSTANTS.POST_TITLE);
+    createNewPostPage.elements.publishButton().should("not.exist");
+  });   
+
 });
