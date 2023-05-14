@@ -1,9 +1,11 @@
 import LoginPage from "../pages/LoginPage";
+import SignInPage from "../pages/SignInPage";
 import PARAMETERS from "../../parameters"
 
 const ghostUrl = Cypress.env("baseURL");
 const CONSTANTS={
-  MAIN_ERROR_LABEL:"Please fill out every field correctly to set up your site."
+  MAIN_ERROR_LABEL:"Please fill out every field correctly to set up your site.",
+  INVALID_EMAIL_ERROR: "Invalid Email.",
 }
 describe("Create a ghost account Functionality", () => {
 
@@ -13,8 +15,25 @@ describe("Create a ghost account Functionality", () => {
     cy.clearLocalStorage();
   });
 
-  // scenario -> Create Ghost account with empty registration fields
 
+  // scenario -> Create Ghost account with incorrect email format
+  it("Create Ghost account with incorrect email format", () => {
+    
+    // Given that I am on the Ghost sign-up page
+    cy.visit(`${ghostUrl}/ghost/#/setup`);
+
+    // When I enter an incorrect email address
+    SignInPage.createAccount(PARAMETERS.BLOG_NAME,
+      PARAMETERS.USER_NAME,
+      PARAMETERS.WRONG_FORMAT_EMAIL,
+      PARAMETERS.USER_PASSWORD)
+
+    // Then I should see an error message
+    cy.contains(CONSTANTS.INVALID_EMAIL_ERROR);
+  });
+
+
+  // scenario -> Create Ghost account with empty registration fields
   it("Create Ghost account with empty registration fields", () => {
     // Given that I am on the Ghost sign-up page
 
@@ -33,23 +52,20 @@ describe("Create a ghost account Functionality", () => {
 
   });
 
-  // scenario -> Create an account in Ghost by entering all fields correctly.
 
+  // scenario -> Create an account in Ghost by entering all fields correctly.
   it("Create an account in Ghost by entering all fields correctly", () => {
     
     // Given that I am on the Ghost sign-up page
-    
     cy.visit(`${ghostUrl}/ghost/#/setup`);
 
-    // When I enter the following information
-
-    cy.get("input[data-test-blog-title-input]").type(PARAMETERS.BLOG_NAME);
-    cy.get("input[data-test-name-input]").type(PARAMETERS.USER_NAME);
-    cy.get("input[data-test-email-input]").type(PARAMETERS.USER_EMAIL);
-    cy.get("input[data-test-password-input]").type(PARAMETERS.USER_PASSWORD);
+    // When I enter the correct information
+    SignInPage.createAccount(PARAMETERS.BLOG_NAME,
+      PARAMETERS.USER_NAME,
+      PARAMETERS.USER_EMAIL,
+      PARAMETERS.USER_PASSWORD)
 
     // Then I should be able to create an account and log in with it.
-    
     cy.get("button[data-test-button='setup']").click();
     cy.visit(`${ghostUrl}/ghost/#/signout`)
     LoginPage.visitLoginPage();
@@ -57,5 +73,5 @@ describe("Create a ghost account Functionality", () => {
     LoginPage.fillPasswordLogin();
     LoginPage.clickFormLogin(); 
     });
-  
+
 });
