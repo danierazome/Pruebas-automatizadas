@@ -10,3 +10,4 @@ Este es el repositorio de pruebas automatizadas del grupo de:
 
 ### [Cypress](/cypress_tests)
 ### [Kraken](/kraken_tests)
+### [BackstopJs](https://github.com/danierazome/Pruebas-automatizadas/wiki/Backstop-JS)
