@@ -1,6 +1,6 @@
 import LoginPage from "../pages/LoginPage";
 
-describe("Verify that a password recovery message is not sent when the recovery process is initiated but not completed", () => {
+describe("Verify that a password recovery message is not sent", () => {
         beforeEach(() => {
             LoginPage.visitLoginPage();
             LoginPage.fillEmailLogin();
