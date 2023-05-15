@@ -1,7 +1,8 @@
 class MemberPage {
 
     goToMemberPage() {
-        cy.get("a[href='#/members/']").click();
+        cy.wait(4000)
+        cy.get("a[data-test-nav='members']").click();
     }
 
     validateExistMembers() {
