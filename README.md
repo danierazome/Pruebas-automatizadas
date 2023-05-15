@@ -1,4 +1,4 @@
-# Entrega Semana 5:
+# Entrega Semana 5 y 6:
 
 Este es el repositorio de pruebas automatizadas del grupo de: 
 - Daniel Erazo
