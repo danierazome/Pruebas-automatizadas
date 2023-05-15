@@ -44,6 +44,6 @@ describe("Customize general information", () => {
             cy.get("button").contains(/Saved/).should('exist');
             cy.get("a[href='#/site/']").click();
             cy.contains("New Title Test").should("exist");
-            cy.screenshot(`v3-${Cypress.currentTest.titlePath.join("/")}/step`);
+            cy.screenshot(`v5-${Cypress.currentTest.titlePath.join("/")}/step`);
     });
 });
