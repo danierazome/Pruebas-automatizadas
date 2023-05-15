@@ -26,7 +26,7 @@ describe("Customize general information", () => {
                 cy.get("button").contains(/Save/).click();
             // Then: should validate timezone
                 cy.get("button").contains(/Saved/).should('exist');
-            
+                cy.screenshot(`v5-${Cypress.currentTest.titlePath.join("/")}/step`);
        });
 
 
@@ -44,6 +44,6 @@ describe("Customize general information", () => {
             cy.get("button").contains(/Saved/).should('exist');
             cy.get("a[href='#/site/']").click();
             cy.contains("New Title Test").should("exist");
-    
+            cy.screenshot(`v3-${Cypress.currentTest.titlePath.join("/")}/step`);
     });
 });

@@ -22,6 +22,7 @@ describe("Import members with CSV file", () => {
             
         // Then: A table should exist showing the created members
             cy.get("table").should("exist")
+            cy.screenshot(`v5-${Cypress.currentTest.titlePath.join("/")}/step`);
     });
 
     it("Import a CSV with invalid email", () => {
@@ -35,6 +36,7 @@ describe("Import members with CSV file", () => {
             MemberPage.importInvalidCSV();
         
         // Then: A member that should not have been created due to an invalid email address
-            cy.get("a[data-test-table-data='details']").should("not.contain", "Juan Perez");
+            cy.get("a[data-test-table-data='details']").should("not.contain", "Laura Gomez");
+            cy.screenshot(`v5-${Cypress.currentTest.titlePath.join("/")}/step`);    
     });
 });
