@@ -1,5 +1,5 @@
 
-## Kraken 
+# Kraken 
 
 Kraken es una herramienta de código abierto para realizar pruebas automáticas del tipo E2E con aplicaciones móviles para Android y aplicaciones WEB. Esta soporta escenarios donde es requerida la intercomunicación entre usuarios o dispositivos 
 
@@ -92,6 +92,12 @@ Kraken es una herramienta de código abierto para realizar pruebas automáticas 
 ## Escenarios de pruebas: 
 
 [Escenarios de pruebas](https://github.com/danierazome/Pruebas-automatizadas/wiki/Escenario-de-pruebas)
+
+# Resemble Js
+
+## Funcionalidades probadas
+* Crear Post y revisar que existe
+* Crear Tag y abrir el nuevo tag con el buscador
 
 ## Ejecucion de pruebas de regresion visual con Resemblejs
 
