@@ -8,6 +8,7 @@ Kraken es una herramienta de código abierto para realizar pruebas automáticas 
 ## Aplicación Objetivo de pruebas
 
 - Ghost v 5.41.0 
+- Ghost v 3.42.0
 
  
 
@@ -106,8 +107,10 @@ La aplicacion Ghost se pasa de la version 5.41.0 a la version 3.42.0
 Nota: La convención de nombres para los escenarios de pruebas en el proyecto de kraken es el siguiente:
 codigoDelEscenario-VersionDelAplicativo
 
-1. Se ejucutan los escenarios de pruebas con la herramienta kraken para la version antigua 5.41.0 generando asi reportes en la carpeta report en la raiz del proyecto kraken_tests donde se podran encontrar screenshots por cada paso de los escenarios de pruebas
-2. Se ejucutan los escenarios de pruebas con la herramienta kraken para la version nueva 3.42.0 generando asi reportes en la carpeta report en la raiz del proyecto kraken_project donde se podran encontrar screenshots por cada paso de los escenarios de pruebas
+Ejemplo: Para el escenario de pruebas 1 el file correspondiente a la version 3.42.0 es **sc01-v3.42.0** y para la version 5.41.0 es **sc01-v5.41.0**
+
+1. Se ejucutan los escenarios de pruebas con la herramienta kraken para la version antigua 5.41.0 generando asi reportes en la carpeta report en la raiz del proyecto kraken_tests/kraken_project donde se podra encontrar una carpeta por cada uno de escenarios de pruebas ejecutados y dentro de esta habrá un folder llamadado screenshots donde se puede encontrar un screenshot por cada paso perteneciente al escenario de prueba ejecutado
+2. Se ejucutan los escenarios de pruebas con la herramienta kraken para la version nueva 3.42.0 generando asi reportes en la carpeta report en la raiz del proyecto kraken_tests/kraken_project donde se podra encontrar una carpeta por cada uno de escenarios de pruebas ejecutados y dentro de esta habrá un folder llamadado screenshots donde se puede encontrar un screenshot por cada paso perteneciente al escenario de prueba ejecutado
 3. Se descarga de este repositorio el proyecto ReseambleJS para kraken el cual se encuenta en kraken_tests/ResembleJS_kraken
 4. Se lanza el comando npm install para que descargue las librerias necesarias para compilar el proyecto de ResembleJS_kraken
 5. Se copia los screenshots generados en el paso 1 para el escenario x en el proyecto de ResembleJS_kraken en la ubicación  ResembleJS_kraken/scenario/old-version y los screenshots generados en el paso 2 para el escenario x en la carpeta ResembleJS_kraken/scenario/new-version
