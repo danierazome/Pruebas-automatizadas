@@ -23,7 +23,6 @@ describe("Create a ghost new Post Functionality", () => {
     // When I write and publish a new post
     CreateNewPost.writePost(CONSTANTS.POST_TITLE, CONSTANTS.POST_CONTENT)
     CreateNewPost.publishPost()
-    cy.screenshot();
 
     // Then I should see the post published on the website
     cy.contains(CONSTANTS.POST_TITLE);
