@@ -62,3 +62,8 @@ Cypress es un framework de pruebas automatizadas para aplicaciones web. Se utili
 
 ## Escenarios de pruebas
 [Escenarios de pruebas](https://github.com/danierazome/Pruebas-automatizadas/wiki/Escenarios-de-pruebas-dise%C3%B1ado-y-ejecutados-con-Cypress)
+
+## Ejecucion de pruebas de regresion visual
+
+1. Se ejucutan los escenarios de pruebas con la herramienta cypress para la version nueva 5.41.0 generando asi los screenshots separados por cada funcionalidad probada, estos se encuentran en la carpeta  [Screenshots](https://github.com/danierazome/Pruebas-automatizadas/tree/main/cypress_tests/cypress/screenshots)
+2.  Se ejucutan los escenarios de pruebas con la herramienta cypress para la version nueva 3.41.1 generando asi los screenshots separados por cada funcionalidad probada, estos se encuentran en la carpeta  [Screenshots](https://github.com/danierazome/Pruebas-automatizadas/tree/main/cypress_tests/cypress/screenshots), donde estos inician con el indicativo **v3**
