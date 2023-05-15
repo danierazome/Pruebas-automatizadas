@@ -1,4 +1,4 @@
-# Entrega Semana 5:
+# Entrega Semana 5 y 6:
 
 Este es el repositorio de pruebas automatizadas del grupo de: 
 - Daniel Erazo
@@ -14,3 +14,7 @@ Este es el repositorio de pruebas automatizadas del grupo de:
 
 ## Herramientas para generar pruebas de regresión visual
 ### [BackstopJs](https://github.com/danierazome/Pruebas-automatizadas/wiki/Backstop-JS)
+### [ReseambleJs](https://github.com/danierazome/Pruebas-automatizadas/wiki/Resemble-JS)
+
+## Video pruebas de regresion visual
+### [Video](https://www.canva.com/design/DAFg_LmmlXg/-C1rvW_CrOl7-FpunaBH5w/edit?utm_content=DAFg_LmmlXg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
