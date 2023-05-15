@@ -10,4 +10,7 @@ Este es el repositorio de pruebas automatizadas del grupo de:
 
 ### [Cypress](/cypress_tests)
 ### [Kraken](/kraken_tests)
+
+
+## Herramientas para generar pruebas de regresión visual
 ### [BackstopJs](https://github.com/danierazome/Pruebas-automatizadas/wiki/Backstop-JS)
