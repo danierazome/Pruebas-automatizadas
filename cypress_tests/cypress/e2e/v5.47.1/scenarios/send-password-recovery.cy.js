@@ -1,4 +1,4 @@
-import LoginPage from "../../../../support/pageobjects/LoginPage";
+import LoginPage from "../pages/LoginPage";
 
 describe("Verify that a password recovery message is not sent when the recovery process is initiated but not completed", () => {
     context("Given: Access web site", () => {
@@ -12,6 +12,7 @@ describe("Verify that a password recovery message is not sent when the recovery 
             });
             it("Then: displays an error message if email delivery fails ' ", () => {
                 cy.contains("Failed to send email. Reason: Sending failed.").should("exist");
+                cy.screenshot(`v5-${Cypress.currentTest.titlePath.join("/")}/step`);
             });
         });
     });
