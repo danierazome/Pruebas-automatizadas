@@ -17,4 +17,4 @@ Este es el repositorio de pruebas automatizadas del grupo de:
 ### [ReseambleJs](https://github.com/danierazome/Pruebas-automatizadas/wiki/Resemble-JS)
 
 ## Video pruebas de regresion visual
-### [ReseambleJs](https://www.canva.com/design/DAFg_LmmlXg/-C1rvW_CrOl7-FpunaBH5w/edit?utm_content=DAFg_LmmlXg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+### [Video](https://www.canva.com/design/DAFg_LmmlXg/-C1rvW_CrOl7-FpunaBH5w/edit?utm_content=DAFg_LmmlXg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
