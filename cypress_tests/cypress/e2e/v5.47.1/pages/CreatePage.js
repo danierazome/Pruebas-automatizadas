@@ -22,6 +22,7 @@ class CreatePage{
         cy.get('button[data-test-button="continue"]').click();
         cy.get("button[data-test-button='confirm-publish']").click();
         cy.get('button[data-test-button="close-publish-flow"]').click();
+        cy.wait(3000)
         cy.get('a[href="#/pages/"]').click();    
         cy.wait(3000)
     }

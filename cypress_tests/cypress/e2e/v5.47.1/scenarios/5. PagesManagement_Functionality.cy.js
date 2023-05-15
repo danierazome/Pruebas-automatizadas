@@ -25,6 +25,7 @@ describe("Create new page on website", () => {
 
         // Then: should see the created page"
             cy.contains(CONSTANTS.PAGE_TITLE).eq(0).should("exist");
+            cy.screenshot(`v5-${Cypress.currentTest.titlePath.join("/")}/step`);
     });
 
     it("Create new page on website scheduled", () => {
@@ -36,6 +37,23 @@ describe("Create new page on website", () => {
     // Then: should see the created page scheduled"
             cy.contains(CONSTANTS.PAGE_TITLE);
             cy.contains('Scheduled')
-        
+            cy.screenshot(`v5-${Cypress.currentTest.titlePath.join("/")}/step`);
     });
+
+    it("Delete page", () => {
+        // When: Go to Pages section and create a new page scheduled. 
+           
+                CreatePage.writeNewPage(CONSTANTS.PAGE_TITLE);
+                CreatePage.confirmNewPage();
+    
+        // Then: should see the created page scheduled"
+                cy.wait(3000);
+                cy.get("a[href='#/pages/']").eq(0).click();
+                cy.contains(CONSTANTS.PAGE_TITLE).click();
+                cy.get('button[title="Settings"]').click();
+                cy.contains(/Delete page/).click();
+                cy.get(".gh-btn.gh-btn-red.gh-btn-icon.ember-view").click();
+                cy.contains(CONSTANTS.PAGE_TITLE).should("not.exist");
+                cy.screenshot(`v5-${Cypress.currentTest.titlePath.join("/")}/step`);
+        });
 });
