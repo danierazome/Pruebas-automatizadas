@@ -26,6 +26,7 @@ class LoginPage {
 
     clickFormLogin() {
         this.elements.loginButton().click();
+        cy.wait(7000);
     }
 }
 
