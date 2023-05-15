@@ -32,7 +32,7 @@ describe("Create a ghost account Functionality", () => {
 
     cy.get("button[data-test-button='setup']").click();
     cy.contains(CONSTANTS.MAIN_ERROR_LABEL)
-
+    cy.screenshot(`v5-${Cypress.currentTest.titlePath.join("/")}/step`);
   });
 
 
@@ -50,6 +50,7 @@ describe("Create a ghost account Functionality", () => {
     // Then I should see an error message
     cy.get("button[data-test-button='setup']").click();
     cy.contains(CONSTANTS.INVALID_EMAIL_ERROR);
+    cy.screenshot(`v5-${Cypress.currentTest.titlePath.join("/")}/step`);
   });
 
 
@@ -67,6 +68,7 @@ describe("Create a ghost account Functionality", () => {
     
     // Then I should see an error message
     cy.contains(CONSTANTS.INVALID_PASSWORD_ERROR)
+    cy.screenshot(`v5-${Cypress.currentTest.titlePath.join("/")}/step`);
   })
 
   it("Create an account in Ghost by entering all fields correctly", () => {
@@ -87,6 +89,7 @@ describe("Create a ghost account Functionality", () => {
     LoginPage.fillEmailLogin();
     LoginPage.fillPasswordLogin();
     LoginPage.clickFormLogin(); 
+    cy.screenshot(`v5-${Cypress.currentTest.titlePath.join("/")}/step`);
     });
 
 });
