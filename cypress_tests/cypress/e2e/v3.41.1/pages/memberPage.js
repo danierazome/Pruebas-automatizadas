@@ -2,7 +2,7 @@ const ghostUrl = Cypress.env("ghostV3");
 
 class MemberPage {
   elements = {
-    actionsButton: () => cy.get("button").contains("span","Actions")
+    actionsButton: () => cy.get("button").contains("span", "Actions"),
   };
 
   goToMemberPage() {
@@ -30,22 +30,23 @@ class MemberPage {
     }
   }
 
-  importInvalidCSV( ) {
+  importInvalidCSV() {
     const existTableMember = this.validateExistMembers();
-    if( !existTableMember ) {
-        cy.contains(/CSV/).click();
-        this.loadFileCSV("cypress/fixtures/member-import-template-wrong.csv");
+    if (!existTableMember) {
+      cy.contains(/CSV/).click();      
+      this.loadFileCSV("cypress/fixtures/member-import-template-wrong.csv");
     } else {
-        cy.get("a[href='#/members/import/']").click();
-        this.loadFileCSV("cypress/fixtures/member-import-template-wrong.csv");
+      cy.get("a[href='#/members/import/']").click();      
+      this.loadFileCSV("cypress/fixtures/member-import-template-wrong.csv");
     }
-}
+  }
 
   loadFileCSV(pathcsv) {
-    cy.get("input[type=file]").eq(0).selectFile(pathcsv, { force: true })
-    cy.get("button").contains(/Import/).click();
-    cy.get("button[data-test-button='close-import-members']").click();
-}
+    cy.get("input[type=file]").eq(0).selectFile(pathcsv, { force: true });
+    cy.get("button")
+      .contains(/Import/)
+      .click();
+  }
 }
 
 export const memberPage = new MemberPage();

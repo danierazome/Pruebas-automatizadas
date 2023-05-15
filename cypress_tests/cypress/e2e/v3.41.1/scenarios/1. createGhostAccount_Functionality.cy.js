@@ -22,8 +22,8 @@ describe("Create ghost account Functionality", () => {
 
   it("Should not allow to create a new ghost account when the inputs are empty", () => {
     const signupUrl = `${ghostUrl}/ghost/#/setup/two`;
-
     cy.visit(signupUrl);
+
     signInPage.elements.createAccountButton().click();
 
     signInPage.elements
@@ -34,6 +34,9 @@ describe("Create ghost account Functionality", () => {
           CONSTANTS.ERROR_LABELS[index]
         );
       });
+
+    cy.wait(500);
+    cy.screenshot(`v3-${Cypress.currentTest.titlePath.join("/")}/step`);
 
     signInPage.elements
       .mainError()
@@ -55,6 +58,9 @@ describe("Create ghost account Functionality", () => {
       .inputErrors()
       .should("have.length", 4)
       .should("contain", CONSTANTS.INVALID_EMAIL_ERROR);
+    
+    cy.wait(500);
+    cy.screenshot(`v3-${Cypress.currentTest.titlePath.join("/")}/step`);
   });
 
   // Third scenary -> The Password input has the wrong format
@@ -71,6 +77,9 @@ describe("Create ghost account Functionality", () => {
       .inputErrors()
       .should("have.length", 4)
       .should("contain", CONSTANTS.ERROR_LABELS[3]);
+
+      cy.wait(500);
+      cy.screenshot(`v3-${Cypress.currentTest.titlePath.join("/")}/step`);
   });
 
   // Fourth scenary -> All the inputs are valid
@@ -83,12 +92,11 @@ describe("Create ghost account Functionality", () => {
       PARAMETERS.USER_PASSWORD
     );
 
-    signInPage.elements.skipNormalFlowButton().click();
+    signInPage.elements.skipNormalFlowButton().click(); 
     cy.visit(`${ghostUrl}/ghost/#/signout`);
+    loginPage.login(PARAMETERS.USER_EMAIL, PARAMETERS.USER_PASSWORD);
 
-    loginPage.login(
-      PARAMETERS.USER_EMAIL,
-      PARAMETERS.USER_PASSWORD
-    );
+    cy.wait(500);
+    cy.screenshot(`v3-${Cypress.currentTest.titlePath.join("/")}/step`);
   });
 });

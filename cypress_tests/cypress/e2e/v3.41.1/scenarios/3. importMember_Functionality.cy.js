@@ -11,21 +11,22 @@ beforeEach(() => {
 // Third Funcionality -> Import members
 
 describe("Import members with CSV file", () => {
-
   // First scenary -> Import a valid CSV
 
   it("Should exist a table showing the created members.", () => {
-    memberPage.elements.actionsButton().click({force: true});
+    memberPage.elements.actionsButton().click({ force: true });
     memberPage.importCSV();
-    // cy.get("table").should("exist");
+    cy.wait(500);
+      cy.screenshot(`v3-${Cypress.currentTest.titlePath.join("/")}/step`);
   });
-
 
   // Second scenary -> Import an invalid CSV
 
   it("Should exist a table showing the created members.", () => {
-    memberPage.elements.actionsButton().click({force: true});
+    memberPage.elements.actionsButton().click({ force: true });
     memberPage.importInvalidCSV();
+    cy.wait(500);
+    cy.screenshot(`v3-${Cypress.currentTest.titlePath.join("/")}/step`);
     // cy.get("table").should("exist");
   });
 });
