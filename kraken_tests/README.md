@@ -73,14 +73,14 @@ Kraken es una herramienta de código abierto para realizar pruebas automáticas 
 
 5. Cambiar la extensión del archivo el cual se desea probar a .feature y validar que sea el unico archivo con esa extensión en la carpeta **features**  
 
-6. Ejecutar el escenario de prueba ejecutando el siguiente en la carpeta raiz: <br> ./node_modules/kraken-node/bin/kraken-node run
+6. Ejecutar el escenario de prueba ejecutando el siguiente en la carpeta raiz (preferiblemente con git bash): <br> ./node_modules/kraken-node/bin/kraken-node run
 
 8. Ir a la carpeta **reports** en la raíz del proyecto y revisar los resultados 
 
 ### Muy importante
 - El usuario registrado en el paso 2 será con el que se realizaran todas las pruebas
 - Las pruebas se deben ejecutar de forma secuencial es decir: Primero se ejecuta sc01-v5.41.0.feature, después sc02-v5.41.0.feature y así sucesivamente.
-- Al comemento de correr la pruebas con kraken utilizando el comando ./node_modules/kraken-node/bin/kraken-node run preferiblemente utilizar git bash 
+- Al momento de correr la pruebas con kraken utilizando el comando ./node_modules/kraken-node/bin/kraken-node run preferiblemente utilizar git bash 
 
 ### Formato del nombre para los escenarios de pruebas presentes **features**
 La convención de nombres para los escenarios de pruebas en el proyecto de kraken es el siguiente: <br>
