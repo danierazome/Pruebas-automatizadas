@@ -65,17 +65,18 @@ Kraken es una herramienta de código abierto para realizar pruebas automáticas 
 
 ### Ejecución de pruebas 
 
-1. Correr Ghost localmente en el puerto 2368, generalmente este es el puerto por defecto.
+1. Correr Ghost localmente en el puerto 2368 para la version v5.41.0, generalmente este es el puerto por defecto.
+2. Correr Ghost localmente en el puerto 3001 para la version v3.42.0.
 
-2. Crear una cuenta en la aplicación de ghost que se encuentra corriendo localmente en su maquina en: <br> http://localhost:2368/ghost/#/setup
+3. Crear una cuenta en la aplicación de ghost que se encuentra corriendo localmente en su maquina en: <br> http://localhost:2368/ghost/#/setup. El email y password deben ser iguales para la version v3.42.0 y v5.41.0 de Ghost
 
-4. Dirigirse al archivo step.js el cual se encuentra en **features/web/step_definitions** y modificar las constantes email y password con las utilizadas en el paso 2 para hacer el registro 
+4. Dirigirse al archivo step.js el cual se encuentra en **features/web/step_definitions** y modificar las constantes email y password con las utilizadas en el paso 3 para hacer el registro 
 
 5. Cambiar la extensión del archivo el cual se desea probar a .feature y validar que sea el unico archivo con esa extensión en la carpeta **features**  
 
 6. Ejecutar el escenario de prueba ejecutando el siguiente en la carpeta raiz (preferiblemente con git bash): <br> ./node_modules/kraken-node/bin/kraken-node run
 
-8. Ir a la carpeta **reports** en la raíz del proyecto y revisar los resultados 
+7. Ir a la carpeta **reports** en la raíz del proyecto y revisar los resultados 
 
 ### Muy importante
 - El usuario registrado en el paso 2 será con el que se realizaran todas las pruebas
